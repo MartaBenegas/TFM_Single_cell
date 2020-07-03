@@ -1,0 +1,162 @@
+---
+title: "Drop-seq dropseqtools integrated"
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+
+dstools <- readRDS("/home/marta/Descargas/dge_originals/dropseq_combined_dstools.rds")
+metadata <- read.table("/home/marta/Descargas/dge_originals/metadata_dstools.txt", header = TRUE, sep = '\t', row.names = 1)
+dstools <- AddMetaData(dstools, metadata, col.name = "type")
+```
+
+SUBSET COMMON CELLS
+```{r}
+common.cells <- read.table("/home/marta/Descargas/seurat-zumis_testing/dropseq_integrated/common_cells.txt", quote = '"')
+dstools <- subset(dstools, cells = common.cells[,1])
+```
+
+STATs
+```{r}
+#add % mitochondrial content
+dstools[["percent.mt"]] <- PercentageFeatureSet(dstools, pattern = "^mt-") 
+length(colnames(dstools))      #number of detected cells
+length(rownames(dstools))      #number of detected genes
+write.table(colnames(dstools), file = "detected_cells.txt", sep = "\n")
+write.table(rownames(dstools), file = "detected_features.txt", sep = "\n")
+write.table(colnames(dstools), file = "/home/marta/Descargas/SEURAT/dropseq/detected_cells_dstools.txt", sep = "\n")
+write.table(rownames(dstools), file = "/home/marta/Descargas/SEURAT/dropseq/detected_features_dstools.txt", sep = "\n")
+summary(dstools$nCount_RNA)    #stats reads/cell
+summary(dstools$nFeature_RNA)  #stats genes/cell
+summary(dstools$percent.mt)    #stats %mt/cell
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/stats_dropseq_dstools.pdf")
+VlnPlot(dstools, features = "nCount_RNA")
+VlnPlot(dstools, features ="nFeature_RNA")
+VlnPlot(dstools, features = "percent.mt")
+hist(dstools$nCount_RNA, breaks = 20, col = "lightblue")
+hist(dstools$nFeature_RNA, breaks = 20, col = "lightblue")
+hist(dstools$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(dstools, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(dstools, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+dstools <- subset(dstools, subset = nCount_RNA < 15000 & nFeature_RNA < 3000)
+```
+
+SPLIT
+```{r}
+dstools.list <- SplitObject(dstools, split.by = "type")
+```
+
+NORMALIZATION
+```{r}
+for (i in 1:length(x=dstools.list)){
+  #dstools.list[[i]] <- SCTransform(dstools.list[[i]])
+  dstools.list[[i]] <- NormalizeData(object = dstools.list[[i]])
+  dstools.list[[i]] <- FindVariableFeatures(object = dstools.list[[i]], selection.method = "vst", nfeatures = 3000)
+}
+pdf(file= "/home/marta/Descargas/SEURAT/dropseq/hvf_dropseq_dstools.pdf")
+VariableFeaturePlot(dstools.list[[1]])
+VariableFeaturePlot(dstools.list[[2]])
+dev.off()
+```
+
+ANCHORS
+```{r}
+dstools.anchors <- FindIntegrationAnchors(object.list = dstools.list, dims = 1:30)
+dstools.combined <- IntegrateData(anchorset = dstools.anchors, dims = 1:30)
+```
+
+DIMENSIONAL REDUCTION
+```{r}
+DefaultAssay(dstools.combined) <- "integrated"
+dstools.combined <- ScaleData(dstools.combined)
+dstools.combined <- RunPCA(dstools.combined, npcs = 50)
+write.table(Embeddings(dstools.combined, reduction = "pca"), file = "/home/marta/Descargas/SEURAT/dropseq/pca_cell_coord_dstools.txt", sep = "\t")
+write.table(Embeddings(dstools.combined, reduction = "pca"), file = "/home/marta/Descargas/SEURAT/dropseq/pca_features_weight_dstools.txt", sep = "\t")
+pdf(file= "/home/marta/Descargas/SEURAT/dropseq/pca_dropseq_dstools.pdf",width = 10)
+ElbowPlot(dstools.combined, ndims = 30, reduction = "pca")
+DimHeatmap(dstools.combined, dims = 1:6, cells = 1000, balanced = TRUE, ncol = 1)
+DimHeatmap(dstools.combined, dims = 7:12, cells = 1000, balanced = TRUE, ncol = 1)
+DimHeatmap(dstools.combined, dims = 13:18, cells = 1000, balanced = TRUE, ncol = 1)
+DimHeatmap(dstools.combined, dims = 19:24, cells = 1000, balanced = TRUE, ncol = 1)
+DimHeatmap(dstools.combined, dims = 25:30, cells = 1000, balanced = TRUE, ncol = 1)
+DimHeatmap(dstools.combined, dims = 31:36, cells = 1000, balanced = TRUE, ncol = 1)
+dev.off()
+```
+
+CLUSTERING
+```{r}
+dstools.combined <- FindNeighbors(dstools.combined, reduction = "pca", dims = 1:30)
+dstools.combined <- FindClusters(dstools.combined, resolution = 0.5)
+dstools.combined <- RunUMAP(dstools.combined, reduction = "pca", dims = 1:30)
+write.table(dstools.combined@active.ident, file = "/home/marta/Descargas/SEURAT/dropseq/clust_identity_dstools.txt", sep = "\t")
+pdf(file= "/home/marta/Descargas/SEURAT/dropseq/umap_dropseq_dstools.pdf")
+DimPlot(dstools.combined, reduction = "umap", group.by = "type")
+DimPlot(dstools.combined, reduction = "umap", split.by = "type")
+dev.off()
+```
+
+
+
+CONSERVED MARKERS
+```{r}
+DefaultAssay(dstools.combined) <- "RNA"
+
+top.markers <- c()
+for (i in 0:12){
+  markers <- FindConservedMarkers(dstools.combined, ident.1 = i, grouping.var = "type", logfc.threshold = 0)
+  top.markers <- c(top.markers, rownames(markers)[1])
+  file.name <- paste("/home/marta/Descargas/SEURAT/dropseq/markers_dstools/cluster",i,"_markers_dstools.txt", sep="")
+  write.table(markers, file = file.name, sep = "\t")
+}
+
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/conserved_markers_dropseq_dstools.pdf")
+FeaturePlot(dstools.combined, features = top.markers[1], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[2], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[3], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[5], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[6], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[7], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[8], split.by = "type", cols = c("grey","red"))
+FeaturePlot(dstools.combined, features = top.markers[9], split.by = "type", cols = c("grey","red"))
+dev.off()
+```
+
+DIFFERENTIAL EXPRESSION ACROSS CONDITIONS
+```{r}
+dstools.combined$clr.type <- paste(Idents(dstools.combined), dstools.combined$type, sep="_")
+dstools.combined$celltype <- Idents(dstools.combined)
+Idents(dstools.combined) <- "clr.type"
+
+for (i in 0:12){
+  id.1 <- paste(i,"_mutant", sep = "")
+  id.2 <- paste(i, "_wild_type", sep = "")
+  markers <- FindMarkers(dstools.combined, ident.1 = id.1, ident.2 = id.2, logfc.threshold = 0)
+  file.name <- paste("/home/marta/Descargas/SEURAT/dropseq/markers_dstools/cluster",i,"_DE_markers_dstools.txt", sep="")
+  write.table(markers, file = file.name, sep = "\t")
+}
+
+mut.clr0 <- FindMarkers(dstools.combined, ident.1 = "0_mutant", ident.2 = "0_wild_type")
+mut.clr1 <- FindMarkers(dstools.combined, ident.1 = "1_mutant", ident.2 = "1_wild_type")
+mut.clr2 <- FindMarkers(dstools.combined, ident.1 = "2_mutant", ident.2 = "2_wild_type")
+
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/markers_dstools/differential_markers_dropseq_dstools.pdf")
+FeaturePlot(dstools.combined, features = rownames(mut.clr0)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(dstools.combined, features = rownames(mut.clr0)[1], split.by = "type", group.by = "celltype")
+FeaturePlot(dstools.combined, features = rownames(mut.clr1)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(dstools.combined, features = rownames(mut.clr1)[1], split.by = "type", group.by = "celltype")
+FeaturePlot(dstools.combined, features = rownames(mut.clr2)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(dstools.combined, features = rownames(mut.clr2)[1], split.by = "type", group.by = "celltype")
+dev.off()
+```
+
+

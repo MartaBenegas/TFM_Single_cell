@@ -1,0 +1,109 @@
+---
+title: "SMART-seq2 zUMIs"
+output: smartseq_zumis
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+raw <- readRDS("/home/marta/Descargas/dge_zumis/smartseq_dm.dgecounts.rds")
+dge <- as.matrix(raw$readcount$exon$all) 
+ercc <- grep("ERCC", rownames(dge))
+
+#CHANGE ROW NAMES - from gene ID to gene name
+gene.info <- read.table("/home/marta/Descargas/dge_zumis/geneInfo_smartseq.tab", fill = TRUE, colClasses = "character")
+#obtain pairs id-names
+ids <- c()
+gnames <- c()
+for (n in 2:nrow(gene.info)){
+  ids <- c(ids, gene.info[n,1])
+  gnames <- c(gnames, gene.info[n,2])
+}
+names(gnames) <- ids
+#change names
+for ( n in 1:nrow(dge) ){
+  gene.id <- rownames(dge)[n]
+  tryCatch(expr = gnames[[gene.id]], error = next)
+  gene.name <- gnames[[gene.id]]
+  rownames(dge)[n] <- gene.name
+}
+
+if (length(ercc) == 0){ 
+zumis <- CreateSeuratObject(counts = dge, project = "smartseq_dm_zumis")
+} else {
+zumis <- CreateSeuratObject(counts = dge[-ercc,], project = "smartseq_dm_zumis")  
+}
+
+```
+
+STATS
+```{r}
+length(colnames(zumis))      #number of detected cells
+length(rownames(zumis))      #number of detected genes
+write.table(colnames(zumis), file = "/home/marta/Descargas/SEURAT/smartseq/detected_cells_zumis.txt", sep = "\n", quote = FALSE)
+write.table(rownames(zumis), file = "/home/marta/Descargas/SEURAT/smartseq/detected_features_zumis.txt", sep = "\n", quote = FALSE)
+summary(zumis$nCount_RNA)    #stats reads/cell
+summary(zumis$nFeature_RNA)  #stats genes/cell
+#add % mitochondrial content
+zumis[["percent.mt"]] <- PercentageFeatureSet(zumis, pattern = "^mt-") 
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/smartseq/smartseq_zumis_stats.pdf")
+VlnPlot(zumis, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"))
+hist(zumis$nCount_RNA, breaks = 10, col = "lightblue")
+hist(zumis$nFeature_RNA, breaks = 10, col = "lightblue")
+hist(zumis$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+#zumis <- subset(zumis, subset = nCount_RNA < 25000 & percent.mt < 5)
+#in this case I will not apply any filter due to the low amount of cells  
+```
+
+NORMALIZATION AND LINEAR REDUCTION (PCA)
+```{r}
+zumis <- SCTransform(zumis)
+zumis <- RunPCA(zumis, assay = "SCT", npcs = 33, reduction.name = "pca_sct")
+write.table(Embeddings(zumis, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/smartseq/pca_cell_coord_zumis_common.txt", sep = "\t", quote = FALSE)
+write.table(Embeddings(zumis, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/smartseq/pca_features_weight_zumis_common.txt", sep = "\t", quote = FALSE)
+#plot pca
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/pca_smartseq_zumis.pdf")
+DimPlot(zumis, reduction = "pca_sct")
+DimHeatmap(zumis, dims = 1:11, cells = 34, balanced = TRUE, reduction = "pca_sct")
+DimHeatmap(zumis, dims = 11:22, cells = 34, balanced = TRUE, reduction = "pca_sct")
+DimHeatmap(zumis, dims = 23:33, cells = 34, balanced = TRUE, reduction = "pca_sct")
+ElbowPlot(zumis, ndims = 33, reduction = "pca_sct")
+dev.off()
+```
+
+CLUSTERING
+```{r}
+#find clusters
+zumis <- FindNeighbors(zumis, dims = 1:29, k.param = 2, assay = "SCT", graph.name = "SCT_snn", reduction = "pca_sct") #use dimensions that have significance - use plots to decide
+zumis <- FindClusters(zumis, resolution = 0.5, graph.name = "SCT_snn") 
+  
+#non-linear dimensional reduction (UMAP)
+zumis <- RunUMAP(zumis, graph = "SCT_snn", reduction = "SCT_snn", umap.method = "umap-learn")
+write.table(FetchData(zumis,"ident"), file = "/home/marta/Descargas/SEURAT/smartseq/clust_identity_zumis.txt", sep = "\t", quote = FALSE)
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/umap_smartseq_zumis.pdf")
+DimPlot(zumis, reduction = "umap")
+dev.off()
+```
+
+DIFFERENTIALLY EXPRESSED GENES (features)
+```{r}
+zumis.markers <- FindAllMarkers(zumis, test.use = "wilcox", assay = "SCT", slot = "data", logfc.threshold = 0, return.thresh = 1)
+write.table(zumis.markers, file="/home/marta/Descargas/SEURAT/smartseq/markers_smartseq_zumis.txt", sep = "\t")
+top.zumis <- zumis.markers %>% group_by(cluster) %>% top_n(n = 1, wt = avg_logFC)
+top10.zumis <- zumis.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_logFC);
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/de_smartseq_zumis.pdf")
+FeaturePlot(zumis, features = top.zumis$gene, reduction = "umap", pt.size = 0.2)
+DoHeatmap(zumis, features = top10.zumis$gene, assay = "SCT")
+dev.off()
+```

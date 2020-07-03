@@ -1,0 +1,115 @@
+---
+title: "Merge projects"
+---
+
+#change ROW NAMES FUNCTION - FROM GENE ID TO GENE NAME
+```{r}
+change.rownames <- function(dge, gene.path){
+  gene.info <- read.table(gene.path, fill = TRUE, colClasses = "character")
+  #obtain pairs id-names
+  ids <- c()
+  gnames <- c()
+  for (n in 2:nrow(gene.info)){
+    ids <- c(ids, gene.info[n,1])
+    gnames <- c(gnames, gene.info[n,2])
+  }
+  names(gnames) <- ids
+  ##change names
+  for ( n in 1:nrow(dge) ){
+    gene.id <- rownames(dge)[n]
+    result <- try(gnames[[gene.id]])
+    if(class(result) == "try-error")next;
+    gene.name <- gnames[[gene.id]]
+    if(gene.name %in% rownames(dge))next;
+    rownames(dge)[n] <- gene.name
+  }
+}
+```
+
+STORE AL MATRIX
+```{r}
+library(Seurat)
+#Rbf1
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/rbf1_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_rbf1.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+rdf1 <- CreateSeuratObject(counts = dge, project = "rdf1_zumis", min.cells = 3, min.features = 200)
+#Rbf3
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/rbf3_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_rbf3.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+rdf3 <- CreateSeuratObject(counts = dge, project = "rdf3_zumis", min.cells = 3, min.features = 200)
+#wt1
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt1_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt1.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt1 <- CreateSeuratObject(counts = dge, project = "wt1_zumis", min.cells = 3, min.features = 200)
+#wt3
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt3_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt3.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt3 <- CreateSeuratObject(counts = dge, project = "wt3_zumis", min.cells = 3, min.features = 200)
+#wt4
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt4_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt4.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt4 <- CreateSeuratObject(counts = dge, project = "wt4_zumis", min.cells = 3, min.features = 200)
+#wt5
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt5_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt5.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt5 <- CreateSeuratObject(counts = dge, project = "wt5_zumis", min.cells = 3, min.features = 200)
+#wt6
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt6_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt6.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt6 <- CreateSeuratObject(counts = dge, project = "wt6_zumis", min.cells = 3, min.features = 200)
+#wt7
+raw <- readRDS("/home/marta/Descargas/dge_zumis/dropseq/wt7_dropseq_dm.dgecounts.rds")
+gene.path <- "/home/marta/Descargas/dge_zumis/dropseq/geneInfo_wt7.tab"
+dge <- as.matrix(raw$umicount$exon$all)
+#change.rownames(dge, gene.path)
+wt7 <- CreateSeuratObject(counts = dge, project = "wt7_zumis", min.cells = 3, min.features = 200)
+```
+
+MERGE ALL MATRIX
+```{r}
+replicates <- c("rbf1","rbf3","wt1","wt3","wt4","wt5","wt6","wt7")
+all.combined <- merge(rdf1, y=c(rdf3, wt1, wt3, wt4, wt5, wt6, wt7), add.cell.ids = replicates, project = "dropseq_zumis")
+saveRDS(all.combined, file = "/home/marta/Descargas/dge_zumis/dropseq_combined_zumis.rds")
+```
+
+
+
+STORE ALL MATRIX - OLD
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+
+
+replicates <- c("rbf1","rbf3","wt1","wt3","wt4","wt5","wt6","wt7")
+n=1
+for (rep in replicates){
+  rds.path = paste("/home/marta/Descargas/dge_zumis/dropseq/",rep,"_dropseq_dm.dgecounts.rds", sep="")
+  gene.path = paste("/home/marta/Descargas/dge_zumis/dropseq/geneInfo_",rep,".tab", sep = "")
+  raw <- readRDS(rds.path)
+  dge <- as.matrix(raw$umicount$exon$all)
+  #change.rownames(dge, gene.path)
+  if (n==1){
+    n = n+1
+    seurat.matrix <- CreateSeuratObject(counts = dge, project = rep, min.cells = 3, min.features = 200)
+    next
+  }
+  new.matrix <- CreateSeuratObject(counts = dge, project = rep, min.cells = 3, min.features = 200)
+  all.combined <- merge(seurat.matrix, y=new.matrix, add.cell.ids = replicates[1:n], project = "dropseq_zumis")
+  n = n+1
+}
+```

@@ -1,0 +1,131 @@
+---
+title: "CellRanger - Seurat"
+output: 10x_cellranger
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+
+cr.data <- Read10X(data.dir = "/home/marta/Descargas/dge_originals/10x_neuron")
+common.cells <- read.table("/home/marta/Descargas/SEURAT/10x/common_cellranger_cells.txt")
+```
+
+CHANGE COL NAMES - from CB+SAMPLE to only CB - not recommended, takes a long time
+```{r}
+#new names
+cell_barcodes <- c()
+sample_idx <- c()
+for (bc in colnames(cr.data)){
+    cell <- substr(bc, 1, 16)
+    sample <-substr(bc,18,19)
+    cell_barcodes <- c(cell_barcodes, cell)
+    sample_idx <- c(sample_idx, sample)
+}
+colnames(cr.data) <- cell_barcodes
+```
+
+CHANGE ROW NAMES - from gene name to gene ID
+```{r}
+gene.info <- read.table("/home/marta/Descargas/mart_export.txt", fill = TRUE, colClasses = "character")
+#obtain gene name - gene id pair
+name.id <- gene.info[,1]
+names(name.id) <- gene.info[,2]
+#change names
+for (n in 2:length(rownames(cr.data))){
+  gene.name <- rownames(cr.data)[n]
+  result <- try(name.id[[gene.name]])
+  if(class(result) == "try-error")next;
+  gene.id <- name.id[[gene.name]]
+  rownames(cr.data)[n] <- gene.id
+}
+
+```
+
+
+SEURAT OBJECT
+```{r}
+cellranger <- CreateSeuratObject(counts = cr.data, project = "10x_cellranger", min.cells = 3, min.features = 200)
+```
+
+SUBSET COMMON CELLS
+```{r}
+common.cells <- read.table("/home/marta/Descargas/SEURAT/10x/common_cellranger_cells.txt", quote = '"')
+cellranger <- subset(cellranger, cells = common.cells[,1])
+```
+
+STATS
+```{r}
+#add % mitochondrial content
+cellranger[["percent.mt"]] <- PercentageFeatureSet(cellranger, pattern = "^mt-") 
+length(colnames(cellranger))      #number of detected cells
+length(rownames(cellranger))      #number of detected genes
+write.table(colnames(cellranger), file = "/home/marta/Descargas/SEURAT/10x/detected_cells_cellranger.txt", sep = "\n")
+write.table(rownames(cellranger), file = "/home/marta/Descargas/SEURAT/10x/detected_features_cellranger.txt", sep = "\n")
+summary(cellranger$nCount_RNA)    #stats reads/cell
+summary(cellranger$nFeature_RNA)  #stats genes/cell
+summary(cellranger$percent.mt)    #stats %mt/cell
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/10x/stats_10x_cellrangerpdf")
+VlnPlot(cellranger, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"))
+hist(cellranger$nCount_RNA, breaks = 20, col = "lightblue")
+hist(cellranger$nFeature_RNA, breaks = 20, col = "lightblue")
+hist(cellranger$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(cellranger, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(cellranger, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+cellranger <- subset(cellranger, subset = nCount_RNA < 20000 & percent.mt < 30)
+```
+
+NORMALIZATION AND LINEAR REDUCTION (PCA)
+```{r}
+cellranger <- SCTransform(cellranger)
+cellranger <- RunPCA(cellranger, assay = "SCT", npcs = 50, reduction.name = "pca_sct")
+write.table(Embeddings(cellranger, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/10x/pca_cell_coord_cellranger.txt", sep = "\t")
+write.table(Loadings(cellranger, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/10x/pca_features_weight_cellranger.txt", sep = "\t")
+
+#plot pca
+pdf(file="/home/marta/Descargas/SEURAT/10x/pca_10x_cellranger.pdf")
+ElbowPlot(cellranger, reduction = "pca_sct", ndims = 30)
+DimHeatmap(cellranger, dims = 1:6, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(cellranger, dims = 7:12, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(cellranger, dims = 13:18, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(cellranger, dims = 19:24, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(cellranger, dims = 25:30, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(cellranger, dims = 31:36, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+dev.off()
+```
+
+CLUSTERING
+```{r}
+#find clusters
+cellranger <- FindNeighbors(cellranger, dims = 1:23, assay = "sct", graph.name = "sct_snn", reduction = "pca_sct") #use dimensions that have significance - use plots to decide
+cellranger <- FindClusters(cellranger, resolution = 0.5, graph.name = "sct_snn") 
+
+#non-linear dimensional reduction (UMAP)
+cellranger <- RunUMAP(cellranger, graph = "sct_snn", reduction = "pca_sct", umap.method = "umap-learn")
+write.table(FetchData(cellranger,"ident"), file = "/home/marta/Descargas/SEURAT/10x/clust_identity_cellranger.txt", sep = "\t")
+pdf(file="/home/marta/Descargas/SEURAT/10x/umap_10x_cellranger.pdf")
+DimPlot(cellranger, reduction = "umap")
+dev.off()
+```
+
+DIFFERENTIALLY EXPRESSED GENES (features)
+```{r}
+cellranger.markers <- FindAllMarkers(cellranger, test.use = "wilcox", assay = "SCT", slot = "data", return.thresh = 1, logfc.threshold = 0)
+write.table(cellranger.markers, file="/home/marta/Descargas/SEURAT/10x/markers_10x_cellranger.txt", sep = "\t")
+top.cellranger <- cellranger.markers %>% group_by(cluster) %>% top_n(n = 1, wt = avg_logFC)
+top10.cellranger <- cellranger.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_logFC)
+pdf(file="/home/marta/Descargas/SEURAT/10x/de_10x_cellranger.pdf")
+FeaturePlot(cellranger, features = top.cellranger$gene, reduction = "umap", pt.size = 0.2)
+DoHeatmap(cellranger, features = top10.cellranger$gene, assay = "SCT")
+dev.off()
+```
+

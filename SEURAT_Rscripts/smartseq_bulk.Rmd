@@ -1,0 +1,91 @@
+---
+title: "SMART-seq2 STAR"
+output: smartseq_star
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+raw <- read.table("/home/marta/Descargas/dge_originals/Adapted_SMART-seq2_DGEM.tsv", header = TRUE, fill = TRUE)
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+ercc <- grep("ERCC", rownames(dge))
+if (length(ercc) == 0){ 
+star <- CreateSeuratObject(counts = dge, project = "smartseq_dm_orig")
+} else {
+star <- CreateSeuratObject(counts = dge[-ercc,], project = "smartseq_dm_orig")  
+}
+```
+
+STATS
+```{r}
+length(colnames(star))      #number of detected cells
+length(rownames(star))      #number of detected genes
+write.table(colnames(star), file = "/home/marta/Descargas/SEURAT/smartseq/detected_cells_star.txt", sep = "\n")
+write.table(rownames(star), file = "/home/marta/Descargas/SEURAT/smartseq/detected_features_star.txt", sep = "\n")
+summary(star$nCount_RNA)    #stats reads/cell
+summary(star$nFeature_RNA)  #stats genes/cell
+#add % mitochondrial content
+star[["percent.mt"]] <- PercentageFeatureSet(star, pattern = "^mt-") 
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/smartseq/stats_smartseq_star.pdf")
+VlnPlot(star, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"))
+hist(star$nCount_RNA, breaks = 10, col = "lightblue")
+hist(star$nFeature_RNA, breaks = 10, col = "lightblue")
+hist(star$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(star, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(star, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+#star <- subset(star, subset = nCount_RNA < 25000 & percent.mt < 5)
+#in this case I will not apply any filter due to the low amount of cells  
+```
+
+NORMALIZATION AND LINEAR REDUCTION (PCA)
+```{r}
+star <- SCTransform(star)
+star <- RunPCA(star, assay = "SCT", npcs = 33, reduction.name = "pca_sct")
+write.table(Embeddings(star, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/smartseq/pca_cell_coord_star.txt", sep = "\t")
+write.table(Embeddings(star, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/smartseq/pca_features_weight_star.txt", sep = "\t")
+  
+#plot pca
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/pca_smartseq_star.pdf")
+DimPlot(star, reduction = "pca_sct")
+DimHeatmap(star, dims = 1:11, cells = 34, balanced = TRUE, reduction = "pca_sct")
+DimHeatmap(star, dims = 11:22, cells = 34, balanced = TRUE, reduction = "pca_sct")
+DimHeatmap(star, dims = 23:33, cells = 34, balanced = TRUE, reduction = "pca_sct")
+ElbowPlot(star, ndims = 33, reduction = "pca_sct")
+dev.off()
+```
+CLUSTERING
+```{r}
+#find clusters
+star <- FindNeighbors(star, dims = 1:33, k.param = 2, assay = "SCT", graph.name = "SCT_snn", reduction = "pca_sct") #use dimensions that have significance - use plots to decide
+star <- FindClusters(star, resolution = 0.5, graph.name = "SCT_snn") 
+  
+#non-linear dimensional reduction (UMAP)
+star <- RunUMAP(star, graph = "SCT_snn", reduction = "SCT_snn", umap.method = "umap-learn")
+write.table(FetchData(star,"ident"), file = "/home/marta/Descargas/SEURAT/smartseq/clust_identity_star.txt", sep = "\t")
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/umap_smartseq_star.pdf")
+DimPlot(star, reduction = "umap")
+dev.off()
+```
+
+DIFFERENTIALLY EXPRESSED GENES (features)
+```{r}
+star.markers <- FindAllMarkers(star, test.use = "wilcox", assay = "SCT", slot = "data", logfc.threshold = 0, return.thresh = 1)
+write.table(star.markers, file="/home/marta/Descargas/SEURAT/smartseq/markers_smartseq_star.txt", sep = "\t")
+top.star <- star.markers %>% group_by(cluster) %>% top_n(n = 1, wt = avg_logFC)
+top10.star <- star.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_logFC);
+pdf(file="/home/marta/Descargas/SEURAT/smartseq/de_smartseq_star.pdf")
+FeaturePlot(star, features = top.star$gene, reduction = "umap", pt.size = 0.2)
+DoHeatmap(star, features = top10.star$gene, assay = "SCT")
+dev.off()
+```
+

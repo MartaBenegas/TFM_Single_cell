@@ -1,0 +1,61 @@
+
+LOAD DATA
+```{r}
+library(Seurat)
+#Rbf1
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178871_Rbf1.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+rbf1 <- CreateSeuratObject(counts = dge, project = "rbf1", min.cells = 3, min.features = 200)
+
+#Rbf3
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178873_Rbf3.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+rbf3 <- CreateSeuratObject(counts = dge, project = "rbf3", min.cells = 3, min.features = 200)
+
+#wt1
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178860_DMS1.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt1 <- CreateSeuratObject(counts = dge, project = "wt1", min.cells = 3, min.features = 200)
+
+#wt3
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178862_DMS3.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt3 <- CreateSeuratObject(counts = dge, project = "wt3", min.cells = 3, min.features = 200)
+
+#wt4
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178863_DMS4.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt4 <- CreateSeuratObject(counts = dge, project = "wt4", min.cells = 3, min.features = 200)
+
+#wt5
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178864_DMS5.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt5 <- CreateSeuratObject(counts = dge, project = "wt5", min.cells = 3, min.features = 200)
+
+#wt6
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178865_DMS6.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt6 <- CreateSeuratObject(counts = dge, project = "wt6", min.cells = 3, min.features = 200)
+
+#wt7
+raw <- read.csv("/home/marta/Descargas/dge_originals/GSE115476_RAW/GSM3178866_DMS7.expr.txt",  header = TRUE, fill = TRUE, row.names = 1, sep = '\t')
+dge <- as.matrix(raw)
+dge[is.na(dge)] <- 0
+wt7 <- CreateSeuratObject(counts = dge, project = "wt7", min.cells = 3, min.features = 200)
+```
+
+MERGE DATA
+```{r}
+replicates <- c("rbf1", "rbf3", "wt1", "wt3", "wt4", "wt5", "wt6", "wt7")
+all.combined <- merge(rbf1, y=c(rbf3, wt1, wt3, wt4, wt5, wt6, wt7), add.cell.ids = replicates, project = "dropseq_dstools")
+saveRDS(all.combined, file = "/home/marta/Descargas/dge_originals/dropseq_combined_dstools.rds")
+```
+
+

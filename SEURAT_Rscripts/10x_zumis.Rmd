@@ -1,0 +1,137 @@
+---
+title: "Zumis 10x - Seurat"
+output: "10x_zumis"
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+AllCounts <- readRDS("/home/marta/Descargas/dge_zumis/mm_neuron_10x_3.dgecounts.rds")
+common.cells <- read.table("/home/marta/Descargas/SEURAT/10x/common_zumis_cells.txt")
+dge <- as.matrix(AllCounts$umicount$exon$all)
+```
+
+CHANGE ROW NAMES - from gene ID to gene name
+```{r}
+gene.info <- read.table("/home/marta/Descargas/dge_zumis/geneInfo_10x.tab", fill = TRUE, colClasses = "character")
+#obtain pairs id-names
+ids <- c()
+gnames <- c()
+for (n in 2:nrow(gene.info)){
+  ids <- c(ids, gene.info[n,1])
+  gnames <- c(gnames, gene.info[n,2])
+}
+names(gnames) <- ids
+#change names
+for ( n in 1:nrow(dge) ){
+  gene.id <- rownames(dge)[n]
+  result <- try(gnames[[gene.id]])
+  if(class(result) == "try-error")next;
+  gene.name <- gnames[[gene.id]]
+  if(gene.name %in% rownames(dge))next;
+  rownames(dge)[n] <- gene.name
+}
+```
+
+CHANGE COL NAMES - from CB+SAMPLE to only CB
+```{r}
+#new names
+cell_barcodes <- c() 
+sample_idx <- c()
+for (bc in colnames(dge)){
+    cell <- substr(bc, 1, 16)
+    sample <-substr(bc, 17, 24)
+    cell_barcodes <- c(cell_barcodes, cell)
+    sample_idx <- c(sample_idx, sample)
+}
+colnames(dge) <- cell_barcodes
+names(sample_idx) <- cell_barcodes
+```
+
+SEURAT OBJECT
+```{r}
+zumis <- CreateSeuratObject(counts = dge, project = "10x_zumis", min.cells = 3, min.features = 200)
+#add sample index as metadata
+zumis <- AddMetaData(object = zumis, metadata = sample_idx, col.name = "sample.index")
+```
+
+SUBSET COMMON CELLS
+```{r}
+common.cells <- read.table("/home/marta/Descargas/SEURAT/10x/common_zumis_cells.txt", quote = '"')
+zumis <- subset(zumis, cells = common.cells[,1])
+```
+
+STATS
+```{r}
+#add % mitochondrial content
+zumis[["percent.mt"]] <- PercentageFeatureSet(zumis, pattern = "^mt-") 
+length(colnames(zumis))      #number of detected cells
+length(rownames(zumis))      #number of detected genes
+write.table(colnames(zumis), file = "/home/marta/Descargas/SEURAT/10x/detected_cells_zumis.txt", sep = "\n")
+write.table(rownames(zumis), file = "/home/marta/Descargas/SEURAT/10x/detected_features_zumis.txt", sep = "\n")
+summary(zumis$nCount_RNA)    #stats reads/cell
+summary(zumis$nFeature_RNA)  #stats genes/cell
+summary(zumis$percent.mt)    #stats %mt/cell
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/10x/stats_10x_zumis.pdf")
+VlnPlot(zumis, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"))
+hist(zumis$nCount_RNA, breaks = 20, col = "lightblue")
+hist(zumis$nFeature_RNA, breaks = 20, col = "lightblue")
+hist(zumis$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+  zumis <- subset(zumis, subset = nCount_RNA < 25000 & percent.mt < 5)
+```
+
+NORMALIZATION AND LINEAR REDUCTION (PCA)
+```{r}
+zumis <- SCTransform(zumis)
+zumis <- RunPCA(zumis, assay = "SCT", npcs = 50, reduction.name = "pca_sct")
+write.table(Embeddings(zumis, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/10x/pca_cell_coord_zumis.txt", sep = "\t")
+write.table(Loadings(zumis, reduction = "pca_sct"), file = "/home/marta/Descargas/SEURAT/10x/pca_features_weight_zumis.txt", sep = "\t")
+#plot pca
+pdf(file="/home/marta/Descargas/SEURAT/10x/pca_10x_zumis.pdf")
+ElbowPlot(zumis, reduction = "pca_sct", ndims = 30)
+DimHeatmap(zumis, dims = 1:6, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(zumis, dims = 7:12, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(zumis, dims = 13:18, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(zumis, dims = 19:24, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(zumis, dims = 25:30, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+DimHeatmap(zumis, dims = 31:36, cells = 500, balanced = TRUE, reduction = "pca_sct", ncol = 1)
+dev.off()
+```
+
+CLUSTERING
+```{r}
+#find clusters
+zumis <- FindNeighbors(zumis, dims = 1:23, assay = "SCT", graph.name = "SCT_snn", reduction = "pca_sct") #use dimensions that have significance - use plots to decide
+zumis <- FindClusters(zumis, resolution = 0.5, graph.name = "SCT_snn") 
+  
+#non-linear dimensional reduction (UMAP)
+zumis <- RunUMAP(zumis, graph = "SCT_snn", reduction = "SCT_snn", umap.method = "umap-learn")
+write.table(FetchData(zumis,"ident"), file = "/home/marta/Descargas/SEURAT/10x/clust_identity_zumis.txt", sep = "\t")
+pdf(file="/home/marta/Descargas/SEURAT/10x/umap_10x_zumis.pdf")
+DimPlot(zumis, reduction = "umap")
+dev.off()
+```
+
+DIFFERENTIALLY EXPRESSED GENES (features)
+```{r}
+zumis.markers <- FindAllMarkers(zumis, test.use = "wilcox", assay = "SCT", slot = "data", return.thresh = 1, logfc.threshold  = 0)
+write.table(zumis.markers, file="/home/marta/Descargas/SEURAT/10x/markers_10x_zumis_2.txt", sep = "\t")
+top.zumis <- zumis.markers %>% group_by(cluster) %>% top_n(n = 1, wt = avg_logFC)
+top10.zumis <- zumis.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_logFC);
+pdf(file="/home/marta/Descargas/seurat-zumis_testing/10x_concat/de_10x_zumis.pdf")
+FeaturePlot(zumis, features = top.zumis$gene, reduction = "umap", pt.size = 0.2)
+DoHeatmap(zumis, features = top10.zumis$gene, assay = "SCT")
+dev.off()
+```
+

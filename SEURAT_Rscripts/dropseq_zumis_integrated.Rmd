@@ -1,0 +1,150 @@
+---
+title: "Drop-seq zUMIs integrated"
+---
+
+LOAD DATA
+```{r}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+
+zumis <- readRDS("/home/marta/Descargas/dge_zumis/dropseq_combined_zumis.rds")
+metadata <- read.table("/home/marta/Descargas/dge_zumis/metadata_zumis.txt", header = TRUE, sep = '\t', row.names = 1)
+zumis <- AddMetaData(zumis, metadata, col.name = "type")
+```
+
+SUBSET COMMON CELLS
+```{r}
+common.cells <- read.table("/home/marta/Descargas/SEURAT/dropseq/common_cells.txt", quote = '"')
+zumis <- subset(zumis, cells = common.cells[,1])
+```
+
+STATs
+```{r}
+#add % mitochondrial content
+zumis[["percent.mt"]] <- PercentageFeatureSet(zumis, pattern = "^mt-") 
+length(colnames(zumis))      #number of detected cells
+length(rownames(zumis))      #number of detected genes
+write.table(colnames(zumis), file = "/home/marta/Descargas/SEURAT/dropseq/detected_cells_zumis.txt", sep = "\n")
+write.table(rownames(zumis), file = "/home/marta/Descargas/SEURAT/dropseq/detected_features_zumis.txt", sep = "\n")
+summary(zumis$nCount_RNA)    #stats reads/cell
+summary(zumis$nFeature_RNA)  #stats genes/cell
+summary(zumis$percent.mt)    #stats %mt/cell
+#plots
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/stats_dropseq_zumis.pdf")
+VlnPlot(zumis, features = "nCount_RNA")
+VlnPlot(zumis, features ="nFeature_RNA")
+VlnPlot(zumis, features = "percent.mt")
+hist(zumis$nCount_RNA, breaks = 20, col = "lightblue")
+hist(zumis$nFeature_RNA, breaks = 20, col = "lightblue")
+hist(zumis$percent.mt, breaks = 10, col = "lightblue")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+FeatureScatter(zumis, feature1 = "nCount_RNA", feature2 = "percent.mt")
+dev.off()
+```
+
+FILTER
+Based on graphical cutoffs
+```{r}
+zumis <- subset(zumis, subset = nCount_RNA < 15000 & nFeature_RNA < 3000)
+```
+
+SPLIT
+```{r}
+zumis.list <- SplitObject(zumis, split.by = "type")
+```
+
+NORMALIZATION
+```{r}
+for (i in 1:length(x=zumis.list)){
+  zumis.list[[i]] <- NormalizeData(object = zumis.list[[i]])
+  zumis.list[[i]] <- FindVariableFeatures(object = zumis.list[[i]], selection.method = "vst", nfeatures = 3000)
+}
+```
+
+ANCHORS
+```{r}
+zumis.anchors <- FindIntegrationAnchors(object.list = zumis.list, dims = 1:30)
+zumis.combined <- IntegrateData(anchorset = zumis.anchors, dims = 1:30)
+```
+
+DIMENSIONAL REDUCTION
+```{r}
+DefaultAssay(zumis.combined) <- "integrated"
+zumis.combined <- ScaleData(zumis.combined)
+zumis.combined <- RunPCA(zumis.combined, npcs = 50)
+
+write.table(Embeddings(zumis.combined, reduction = "pca"), file = "/home/marta/Descargas/SEURAT/dropseq/pca_cell_coord_zumis.txt", sep = "\t")
+write.table(Embeddings(zumis.combined, reduction = "pca"), file = "/home/marta/Descargas/SEURAT/dropseq/pca_features_weight_zumis.txt", sep = "\t")
+
+pdf(file= "/home/marta/Descargas/SEURAT/dropseq/pca_dropseq_zumis.pdf")
+DimHeatmap(zumis.combined, dims = 1:15, cells = 1000, balanced = TRUE)
+DimHeatmap(zumis.combined, dims = 16:30, cells = 1000, balanced = TRUE)
+DimHeatmap(zumis.combined, dims = 31:45, cells = 1000, balanced = TRUE)
+ElbowPlot(zumis.combined, ndims = 30, reduction = "pca")
+dev.off()
+```
+
+CLUSTERING
+```{r}
+zumis.combined <- RunUMAP(zumis.combined, reduction = "pca", dims = 1:30)
+zumis.combined <- FindNeighbors(zumis.combined, reduction = "pca", dims = 1:30)
+zumis.combined <- FindClusters(zumis.combined, resolution = 0.5)
+
+write.table(zumis.combined@active.ident, file = "/home/marta/Descargas/SEURAT/dropseq/clust_identity_zumis.txt", sep = "\t")
+pdf(file= "/home/marta/Descargas/SEURAT/dropseq/umap_dropseq_zumis.pdf")
+DimPlot(zumis.combined, reduction = "umap", group.by = "type")
+DimPlot(zumis.combined, reduction = "umap", split.by = "type")
+dev.off()
+```
+
+
+DIFFERENTIAL EXPRESSION ACROSS CLUSTERS - CONSERVED CLUSTER MARKERS ACROSS CONDITIONS
+```{r}
+DefaultAssay(zumis.combined) <- "RNA"
+
+top.markers <- c()
+for (i in 0:12){
+  markers <- FindConservedMarkers(zumis.combined, ident.1 = i, grouping.var = "type", logfc.threshold = 0)
+  top.markers <- c(top.markers, rownames(markers)[1])
+  file.name <- paste("/home/marta/Descargas/SEURAT/dropseq/markers_zumis/cluster",i,"_markers_zumis.txt", sep="")
+  write.table(markers, file = file.name, sep = "\t")
+}
+
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/conserved_markers_dropseq_zumis.pdf")
+FeaturePlot(zumis.combined, features = top.markers[1], split.by = "type", cols = c("grey","red"))
+FeaturePlot(zumis.combined, features = top.markers[2], split.by = "type", cols = c("grey","red"))
+FeaturePlot(zumis.combined, features = top.markers[3], split.by = "type", cols = c("grey","red"))
+FeaturePlot(zumis.combined, features = top.markers[5], split.by = "type", cols = c("grey","red"))
+dev.off()
+```
+
+DIFFERENTIAL EXPRESSION ACROSS CONDITIONS
+```{r}
+zumis.combined$clr.type <- paste(Idents(zumis.combined), zumis.combined$type, sep="_")
+zumis.combined$celltype <- Idents(zumis.combined)
+Idents(zumis.combined) <- "clr.type"
+
+for (i in 0:12){
+  id.1 <- paste(i,"_wild_type", sep = "")
+  id.2 <- paste(i, "_mutant", sep = "")
+  markers <- FindMarkers(zumis.combined, ident.1 = id.1, ident.2 = id.2, logfc.threshold = 0 )
+  file.name <- paste("/home/marta/Descargas/SEURAT/dropseq/markers_zumis/cluster",i,"_DE_markers_zumis.txt", sep="")
+  write.table(markers, file = file.name, sep = "\t")
+}
+
+mut.clr0 <- FindMarkers(zumis.combined, ident.1 = "0_mutant", ident.2 = "0_wild_type")
+mut.clr1 <- FindMarkers(zumis.combined, ident.1 = "1_mutant", ident.2 = "1_wild_type")
+mut.clr2 <- FindMarkers(zumis.combined, ident.1 = "2_mutant", ident.2 = "2_wild_type")
+
+pdf(file = "/home/marta/Descargas/SEURAT/dropseq/differential_markers_dropseq_zumis.pdf")
+FeaturePlot(zumis.combined, features = rownames(mut.clr0)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(zumis.combined, features = rownames(mut.clr0)[1], split.by = "type", group.by = "celltype")
+FeaturePlot(zumis.combined, features = rownames(mut.clr1)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(zumis.combined, features = rownames(mut.clr1)[1], split.by = "type", group.by = "celltype")
+FeaturePlot(zumis.combined, features = rownames(mut.clr2)[1], split.by = "type", cols = c("grey","red"))
+VlnPlot(zumis.combined, features = rownames(mut.clr2)[1], split.by = "type", group.by = "celltype")
+dev.off()
+```
+
+
