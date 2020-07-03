@@ -1,0 +1,8 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0002181	cytoplasmic translation	BIOLOGICAL_PROCESS	111	0.2904825	3.4185677	0.0	0.0	0.0	770	tags=66%, list=38%, signal=101%
+[TOP, DETAILS]	GO:0006412	translation	BIOLOGICAL_PROCESS	192	0.20287317	3.1345675	0.0	0.0	0.0	772	tags=57%, list=38%, signal=83%
+[TOP, DETAILS]	GO:0043043	peptide biosynthetic process	BIOLOGICAL_PROCESS	200	0.18410595	2.9005835	0.0	7.109875E-4	0.004	772	tags=55%, list=38%, signal=80%
+[BOTTOM, DETAILS]	GO:0009952	anterior/posterior pattern specification	BIOLOGICAL_PROCESS	71	-0.25306398	-2.4684496	0.0	0.19517916	0.123	700	tags=59%, list=35%, signal=88%
+[BOTTOM, DETAILS]	GO:0003002	regionalization	BIOLOGICAL_PROCESS	186	-0.15324645	-2.3281934	0.0	0.24934441	0.296	619	tags=45%, list=31%, signal=58%
+[BOTTOM, DETAILS]	GO:0006457	protein folding	BIOLOGICAL_PROCESS	59	-0.22234371	-2.0336642	0.0041841003	0.24611744	0.903	317	tags=37%, list=16%, signal=43%
+[BOTTOM, DETAILS]	GO:0002065	columnar/cuboidal epithelial cell differentiation	BIOLOGICAL_PROCESS	134	-0.15484081	-2.0178268	0.0056710774	0.2383057	0.924	506	tags=40%, list=25%, signal=49%

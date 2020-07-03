@@ -1,0 +1,7 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0050808	synapse organization	BIOLOGICAL_PROCESS	23	0.78583664	4.489445	0.0	0.0	0.0	1773	tags=100%, list=22%, signal=127%
+[TOP, DETAILS]	GO:0043087	regulation of GTPase activity	BIOLOGICAL_PROCESS	18	0.7780222	3.9408214	0.0	0.0	0.0	1833	tags=100%, list=22%, signal=129%
+[TOP, DETAILS]	GO:0043547	positive regulation of GTPase activity	BIOLOGICAL_PROCESS	17	0.77792716	3.9058294	0.0	0.0	0.0	1833	tags=100%, list=22%, signal=129%
+[TOP, DETAILS]	GO:0042391	regulation of membrane potential	BIOLOGICAL_PROCESS	20	0.72576725	3.9042518	0.0	0.0	0.0	1852	tags=95%, list=23%, signal=122%
+[TOP, DETAILS]	GO:0034329	cell junction assembly	BIOLOGICAL_PROCESS	16	0.8023952	3.8632202	0.0	0.0	0.0	1632	tags=100%, list=20%, signal=125%
+[TOP, DETAILS]	GO:0061564	axon development	BIOLOGICAL_PROCESS	15	0.7638075	3.4481182	0.0	0.0	0.0	1947	tags=100%, list=24%, signal=131%

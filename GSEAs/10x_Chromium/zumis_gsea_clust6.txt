@@ -1,0 +1,3 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0061919	process utilizing autophagic mechanism	BIOLOGICAL_PROCESS	18	0.5128814	2.6031005	0.0	0.0	0.0	4328	tags=100%, list=49%, signal=195%
+[TOP, DETAILS]	GO:0006914	autophagy	BIOLOGICAL_PROCESS	18	0.5128814	2.6015902	0.0	0.0	0.0	4328	tags=100%, list=49%, signal=195%

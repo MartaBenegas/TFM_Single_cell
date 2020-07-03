@@ -1,0 +1,2 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[BOTTOM, DETAILS]	GO:0051321	meiotic cell cycle	BIOLOGICAL_PROCESS	47	-0.27656287	-2.1620288	0.0	0.21576327	0.545	528	tags=66%, list=39%, signal=105%

@@ -1,0 +1,432 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0048285	organelle fission	BIOLOGICAL_PROCESS	67	0.73470575	7.2091217	0.0	0.0	0.0	1818	tags=93%, list=20%, signal=114%
+[TOP, DETAILS]	GO:0000280	nuclear division	BIOLOGICAL_PROCESS	66	0.7487473	7.04653	0.0	0.0	0.0	1818	tags=94%, list=20%, signal=116%
+[TOP, DETAILS]	GO:0140014	mitotic nuclear division	BIOLOGICAL_PROCESS	52	0.79507047	6.811939	0.0	0.0	0.0	1764	tags=98%, list=19%, signal=120%
+[TOP, DETAILS]	GO:0007059	chromosome segregation	BIOLOGICAL_PROCESS	59	0.7453915	6.5114894	0.0	0.0	0.0	1305	tags=88%, list=14%, signal=102%
+[TOP, DETAILS]	GO:0044770	cell cycle phase transition	BIOLOGICAL_PROCESS	58	0.7245155	6.4820156	0.0	0.0	0.0	2278	tags=97%, list=25%, signal=127%
+[TOP, DETAILS]	GO:0000819	sister chromatid segregation	BIOLOGICAL_PROCESS	39	0.8629233	6.343042	0.0	0.0	0.0	1305	tags=100%, list=14%, signal=116%
+[TOP, DETAILS]	GO:0045786	negative regulation of cell cycle	BIOLOGICAL_PROCESS	58	0.69544965	6.2941346	0.0	0.0	0.0	2066	tags=91%, list=22%, signal=117%
+[TOP, DETAILS]	GO:0044772	mitotic cell cycle phase transition	BIOLOGICAL_PROCESS	54	0.72163224	6.254987	0.0	0.0	0.0	2278	tags=96%, list=25%, signal=127%
+[TOP, DETAILS]	GO:0098813	nuclear chromosome segregation	BIOLOGICAL_PROCESS	48	0.7590562	6.2368016	0.0	0.0	0.0	1305	tags=90%, list=14%, signal=104%
+[TOP, DETAILS]	GO:0000070	mitotic sister chromatid segregation	BIOLOGICAL_PROCESS	34	0.86245674	6.001414	0.0	0.0	0.0	1305	tags=100%, list=14%, signal=116%
+[TOP, DETAILS]	GO:0006281	DNA repair	BIOLOGICAL_PROCESS	62	0.6358862	5.9814425	0.0	0.0	0.0	2969	tags=95%, list=32%, signal=139%
+[TOP, DETAILS]	GO:0007051	spindle organization	BIOLOGICAL_PROCESS	38	0.7603282	5.589901	0.0	0.0	0.0	1764	tags=95%, list=19%, signal=116%
+[TOP, DETAILS]	GO:0045787	positive regulation of cell cycle	BIOLOGICAL_PROCESS	43	0.7288038	5.5517406	0.0	0.0	0.0	1900	tags=93%, list=20%, signal=116%
+[TOP, DETAILS]	GO:1901987	regulation of cell cycle phase transition	BIOLOGICAL_PROCESS	42	0.71006495	5.4401293	0.0	0.0	0.0	2278	tags=95%, list=25%, signal=126%
+[TOP, DETAILS]	GO:0051783	regulation of nuclear division	BIOLOGICAL_PROCESS	31	0.8125608	5.4014316	0.0	0.0	0.0	1764	tags=100%, list=19%, signal=123%
+[TOP, DETAILS]	GO:0007088	regulation of mitotic nuclear division	BIOLOGICAL_PROCESS	30	0.81247306	5.3577976	0.0	0.0	0.0	1764	tags=100%, list=19%, signal=123%
+[TOP, DETAILS]	GO:0051321	meiotic cell cycle	BIOLOGICAL_PROCESS	35	0.77259654	5.3481617	0.0	0.0	0.0	1076	tags=89%, list=12%, signal=100%
+[TOP, DETAILS]	GO:0071900	regulation of protein serine/threonine kinase activity	BIOLOGICAL_PROCESS	39	0.7153522	5.3380256	0.0	0.0	0.0	2193	tags=95%, list=24%, signal=124%
+[TOP, DETAILS]	GO:0045860	positive regulation of protein kinase activity	BIOLOGICAL_PROCESS	39	0.7366656	5.3347344	0.0	0.0	0.0	1758	tags=92%, list=19%, signal=113%
+[TOP, DETAILS]	GO:0006260	DNA replication	BIOLOGICAL_PROCESS	44	0.66056705	5.2193437	0.0	0.0	0.0	1702	tags=84%, list=18%, signal=102%
+[TOP, DETAILS]	GO:0070482	response to oxygen levels	BIOLOGICAL_PROCESS	40	0.68639904	5.1965656	0.0	0.0	0.0	1545	tags=85%, list=17%, signal=102%
+[TOP, DETAILS]	GO:1902850	microtubule cytoskeleton organization involved in mitosis	BIOLOGICAL_PROCESS	33	0.75191426	5.195785	0.0	0.0	0.0	1764	tags=94%, list=19%, signal=116%
+[TOP, DETAILS]	GO:0010639	negative regulation of organelle organization	BIOLOGICAL_PROCESS	46	0.6456729	5.187838	0.0	0.0	0.0	2914	tags=96%, list=31%, signal=139%
+[TOP, DETAILS]	GO:0010948	negative regulation of cell cycle process	BIOLOGICAL_PROCESS	35	0.7228939	5.1582627	0.0	0.0	0.0	2066	tags=94%, list=22%, signal=121%
+[TOP, DETAILS]	GO:0051983	regulation of chromosome segregation	BIOLOGICAL_PROCESS	24	0.8615252	5.1379867	0.0	0.0	0.0	1305	tags=100%, list=14%, signal=116%
+[TOP, DETAILS]	GO:0001701	in utero embryonic development	BIOLOGICAL_PROCESS	45	0.6352928	5.1335816	0.0	0.0	0.0	2794	tags=93%, list=30%, signal=133%
+[TOP, DETAILS]	GO:1901990	regulation of mitotic cell cycle phase transition	BIOLOGICAL_PROCESS	39	0.706156	5.1239686	0.0	0.0	0.0	2278	tags=95%, list=25%, signal=125%
+[TOP, DETAILS]	GO:0050673	epithelial cell proliferation	BIOLOGICAL_PROCESS	35	0.712231	5.10253	0.0	0.0	0.0	2695	tags=100%, list=29%, signal=140%
+[TOP, DETAILS]	GO:0061458	reproductive system development	BIOLOGICAL_PROCESS	38	0.68506455	5.0979724	0.0	0.0	0.0	2704	tags=97%, list=29%, signal=137%
+[TOP, DETAILS]	GO:0045930	negative regulation of mitotic cell cycle	BIOLOGICAL_PROCESS	33	0.7320202	5.007827	0.0	0.0	0.0	1948	tags=94%, list=21%, signal=118%
+[TOP, DETAILS]	GO:0090068	positive regulation of cell cycle process	BIOLOGICAL_PROCESS	33	0.7376719	4.9949822	0.0	0.0	0.0	2177	tags=97%, list=23%, signal=126%
+[TOP, DETAILS]	GO:0031589	cell-substrate adhesion	BIOLOGICAL_PROCESS	31	0.7445228	4.965577	0.0	0.0	0.0	2094	tags=97%, list=23%, signal=125%
+[TOP, DETAILS]	GO:0048608	reproductive structure development	BIOLOGICAL_PROCESS	38	0.68506455	4.959799	0.0	0.0	0.0	2704	tags=97%, list=29%, signal=137%
+[TOP, DETAILS]	GO:0071103	DNA conformation change	BIOLOGICAL_PROCESS	37	0.679099	4.9515643	0.0	0.0	0.0	2501	tags=95%, list=27%, signal=129%
+[TOP, DETAILS]	GO:0033044	regulation of chromosome organization	BIOLOGICAL_PROCESS	41	0.6627463	4.8986716	0.0	0.0	0.0	2251	tags=90%, list=24%, signal=119%
+[TOP, DETAILS]	GO:0007178	transmembrane receptor protein serine/threonine kinase signaling pathway	BIOLOGICAL_PROCESS	30	0.7378946	4.8968835	0.0	0.0	0.0	2454	tags=100%, list=26%, signal=136%
+[TOP, DETAILS]	GO:0036293	response to decreased oxygen levels	BIOLOGICAL_PROCESS	38	0.6783234	4.894256	0.0	0.0	0.0	1545	tags=84%, list=17%, signal=101%
+[TOP, DETAILS]	GO:0051656	establishment of organelle localization	BIOLOGICAL_PROCESS	34	0.72091264	4.8668723	0.0	0.0	0.0	1249	tags=85%, list=13%, signal=98%
+[TOP, DETAILS]	GO:0007264	small GTPase mediated signal transduction	BIOLOGICAL_PROCESS	33	0.72618175	4.8366756	0.0	0.0	0.0	2002	tags=94%, list=22%, signal=119%
+[TOP, DETAILS]	GO:0006261	DNA-dependent DNA replication	BIOLOGICAL_PROCESS	31	0.7221643	4.810274	0.0	0.0	0.0	1702	tags=90%, list=18%, signal=110%
+[TOP, DETAILS]	GO:0006310	DNA recombination	BIOLOGICAL_PROCESS	36	0.6617997	4.803291	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP, DETAILS]	GO:0016049	cell growth	BIOLOGICAL_PROCESS	32	0.70161486	4.803023	0.0	0.0	0.0	2501	tags=97%, list=27%, signal=132%
+[TOP, DETAILS]	GO:0051052	regulation of DNA metabolic process	BIOLOGICAL_PROCESS	40	0.6401104	4.798505	0.0	0.0	0.0	2901	tags=95%, list=31%, signal=138%
+[TOP, DETAILS]	GO:0001666	response to hypoxia	BIOLOGICAL_PROCESS	38	0.6783234	4.794676	0.0	0.0	0.0	1545	tags=84%, list=17%, signal=101%
+[TOP, DETAILS]	GO:0001503	ossification	BIOLOGICAL_PROCESS	34	0.6949611	4.7787967	0.0	0.0	0.0	2035	tags=91%, list=22%, signal=116%
+[TOP, DETAILS]	GO:1903046	meiotic cell cycle process	BIOLOGICAL_PROCESS	28	0.74670416	4.724743	0.0	0.0	0.0	1045	tags=86%, list=11%, signal=96%
+[TOP, DETAILS]	GO:0016055	Wnt signaling pathway	BIOLOGICAL_PROCESS	33	0.69933856	4.7175927	0.0	0.0	0.0	1969	tags=91%, list=21%, signal=115%
+[TOP, DETAILS]	GO:0198738	cell-cell signaling by wnt	BIOLOGICAL_PROCESS	33	0.69933856	4.714086	0.0	0.0	0.0	1969	tags=91%, list=21%, signal=115%
+[TOP, DETAILS]	GO:0030900	forebrain development	BIOLOGICAL_PROCESS	27	0.7697941	4.7134604	0.0	0.0	0.0	1469	tags=93%, list=16%, signal=110%
+[TOP, DETAILS]	GO:0009611	response to wounding	BIOLOGICAL_PROCESS	33	0.68944067	4.684435	0.0	0.0	0.0	1498	tags=85%, list=16%, signal=101%
+[TOP]	GO:0001667	ameboidal-type cell migration	BIOLOGICAL_PROCESS	29	0.73316014	4.6776104	0.0	0.0	0.0	2177	tags=97%, list=23%, signal=126%
+[TOP]	GO:0009314	response to radiation	BIOLOGICAL_PROCESS	37	0.6412553	4.66908	0.0	0.0	0.0	2600	tags=92%, list=28%, signal=127%
+[TOP]	GO:0048762	mesenchymal cell differentiation	BIOLOGICAL_PROCESS	22	0.80302376	4.657249	0.0	0.0	0.0	1845	tags=100%, list=20%, signal=125%
+[TOP]	GO:0048871	multicellular organismal homeostasis	BIOLOGICAL_PROCESS	32	0.70528376	4.6342535	0.0	0.0	0.0	2177	tags=94%, list=23%, signal=122%
+[TOP]	GO:0051961	negative regulation of nervous system development	BIOLOGICAL_PROCESS	27	0.7526742	4.620298	0.0	0.0	0.0	2315	tags=100%, list=25%, signal=133%
+[TOP]	GO:0007052	mitotic spindle organization	BIOLOGICAL_PROCESS	27	0.74243355	4.6128907	0.0	0.0	0.0	2066	tags=96%, list=22%, signal=124%
+[TOP]	GO:0050678	regulation of epithelial cell proliferation	BIOLOGICAL_PROCESS	30	0.7118462	4.607426	0.0	0.0	0.0	2695	tags=100%, list=29%, signal=140%
+[TOP]	GO:1901342	regulation of vasculature development	BIOLOGICAL_PROCESS	27	0.73508614	4.606258	0.0	0.0	0.0	2134	tags=96%, list=23%, signal=125%
+[TOP]	GO:0043434	response to peptide hormone	BIOLOGICAL_PROCESS	30	0.70549077	4.6037927	0.0	0.0	0.0	2135	tags=93%, list=23%, signal=121%
+[TOP]	GO:0043062	extracellular structure organization	BIOLOGICAL_PROCESS	27	0.7399724	4.5884724	0.0	0.0	0.0	1745	tags=93%, list=19%, signal=114%
+[TOP]	GO:0065004	protein-DNA complex assembly	BIOLOGICAL_PROCESS	20	0.8433276	4.585247	0.0	0.0	0.0	1006	tags=95%, list=11%, signal=106%
+[TOP]	GO:0008015	blood circulation	BIOLOGICAL_PROCESS	27	0.7323249	4.567505	0.0	0.0	0.0	1472	tags=89%, list=16%, signal=105%
+[TOP]	GO:0043405	regulation of MAP kinase activity	BIOLOGICAL_PROCESS	21	0.8123313	4.5656805	0.0	0.0	0.0	1758	tags=100%, list=19%, signal=123%
+[TOP]	GO:0030111	regulation of Wnt signaling pathway	BIOLOGICAL_PROCESS	26	0.7514045	4.565465	0.0	0.0	0.0	1969	tags=96%, list=21%, signal=122%
+[TOP]	GO:0048568	embryonic organ development	BIOLOGICAL_PROCESS	34	0.66868514	4.5640936	0.0	0.0	0.0	2278	tags=91%, list=25%, signal=120%
+[TOP]	GO:0033002	muscle cell proliferation	BIOLOGICAL_PROCESS	23	0.79192513	4.5522637	0.0	0.0	0.0	1545	tags=96%, list=17%, signal=114%
+[TOP]	GO:0044843	cell cycle G1/S phase transition	BIOLOGICAL_PROCESS	28	0.7238492	4.537661	0.0	0.0	0.0	2251	tags=96%, list=24%, signal=127%
+[TOP]	GO:0045931	positive regulation of mitotic cell cycle	BIOLOGICAL_PROCESS	25	0.75504375	4.5258284	0.0	0.0	0.0	1549	tags=92%, list=17%, signal=110%
+[TOP]	GO:0140013	meiotic nuclear division	BIOLOGICAL_PROCESS	26	0.7355229	4.5212235	0.0	0.0	0.0	1045	tags=85%, list=11%, signal=95%
+[TOP]	GO:0007163	establishment or maintenance of cell polarity	BIOLOGICAL_PROCESS	24	0.7860499	4.5190706	0.0	0.0	0.0	1617	tags=96%, list=17%, signal=116%
+[TOP]	GO:0010721	negative regulation of cell development	BIOLOGICAL_PROCESS	26	0.7525929	4.500594	0.0	0.0	0.0	2315	tags=100%, list=25%, signal=133%
+[TOP]	GO:0042692	muscle cell differentiation	BIOLOGICAL_PROCESS	27	0.7323249	4.495253	0.0	0.0	0.0	1472	tags=89%, list=16%, signal=105%
+[TOP]	GO:0003012	muscle system process	BIOLOGICAL_PROCESS	23	0.7703245	4.4657836	0.0	0.0	0.0	1745	tags=96%, list=19%, signal=118%
+[TOP]	GO:0050768	negative regulation of neurogenesis	BIOLOGICAL_PROCESS	25	0.75251156	4.462415	0.0	0.0	0.0	2315	tags=100%, list=25%, signal=133%
+[TOP]	GO:0042060	wound healing	BIOLOGICAL_PROCESS	28	0.69775236	4.4585686	0.0	0.0	0.0	1498	tags=86%, list=16%, signal=102%
+[TOP]	GO:0001655	urogenital system development	BIOLOGICAL_PROCESS	30	0.6828578	4.455766	0.0	0.0	0.0	2035	tags=90%, list=22%, signal=115%
+[TOP]	GO:0006302	double-strand break repair	BIOLOGICAL_PROCESS	36	0.63391376	4.4550457	0.0	0.0	0.0	3162	tags=97%, list=34%, signal=147%
+[TOP]	GO:0007093	mitotic cell cycle checkpoint	BIOLOGICAL_PROCESS	24	0.7554818	4.449561	0.0	0.0	0.0	1900	tags=96%, list=20%, signal=120%
+[TOP]	GO:0007265	Ras protein signal transduction	BIOLOGICAL_PROCESS	27	0.7122036	4.445095	0.0	0.0	0.0	2002	tags=93%, list=22%, signal=118%
+[TOP]	GO:1901991	negative regulation of mitotic cell cycle phase transition	BIOLOGICAL_PROCESS	26	0.71510375	4.435342	0.0	0.0	0.0	1948	tags=92%, list=21%, signal=116%
+[TOP]	GO:0030198	extracellular matrix organization	BIOLOGICAL_PROCESS	27	0.7399724	4.4279	0.0	0.0	0.0	1745	tags=93%, list=19%, signal=114%
+[TOP]	GO:0000075	cell cycle checkpoint	BIOLOGICAL_PROCESS	30	0.6860355	4.4266834	0.0	0.0	0.0	2315	tags=93%, list=25%, signal=124%
+[TOP]	GO:0071824	protein-DNA complex subunit organization	BIOLOGICAL_PROCESS	21	0.798078	4.420047	0.0	0.0	0.0	1006	tags=90%, list=11%, signal=101%
+[TOP]	GO:0071214	cellular response to abiotic stimulus	BIOLOGICAL_PROCESS	37	0.60457224	4.419298	0.0	0.0	0.0	3190	tags=95%, list=34%, signal=144%
+[TOP]	GO:0001649	osteoblast differentiation	BIOLOGICAL_PROCESS	25	0.7426509	4.4183755	0.0	0.0	0.0	2035	tags=96%, list=22%, signal=123%
+[TOP]	GO:0048545	response to steroid hormone	BIOLOGICAL_PROCESS	22	0.7895347	4.40912	0.0	0.0	0.0	1548	tags=95%, list=17%, signal=114%
+[TOP]	GO:0104004	cellular response to environmental stimulus	BIOLOGICAL_PROCESS	37	0.60457224	4.408028	0.0	0.0	0.0	3190	tags=95%, list=34%, signal=144%
+[TOP]	GO:0060485	mesenchyme development	BIOLOGICAL_PROCESS	26	0.72623163	4.399878	0.0	0.0	0.0	1845	tags=92%, list=20%, signal=115%
+[TOP]	GO:0051225	spindle assembly	BIOLOGICAL_PROCESS	22	0.7791577	4.356478	0.0	0.0	0.0	2066	tags=100%, list=22%, signal=128%
+[TOP]	GO:1901988	negative regulation of cell cycle phase transition	BIOLOGICAL_PROCESS	27	0.70528847	4.354698	0.0	0.0	0.0	2066	tags=93%, list=22%, signal=119%
+[TOP]	GO:0043087	regulation of GTPase activity	BIOLOGICAL_PROCESS	27	0.6915661	4.33409	0.0	0.0	0.0	2193	tags=93%, list=24%, signal=121%
+[TOP]	GO:0007389	pattern specification process	BIOLOGICAL_PROCESS	29	0.67932487	4.3273687	0.0	0.0	0.0	2035	tags=90%, list=22%, signal=114%
+[TOP]	GO:0003002	regionalization	BIOLOGICAL_PROCESS	26	0.70570445	4.321226	0.0	0.0	0.0	2035	tags=92%, list=22%, signal=118%
+[TOP]	GO:0072001	renal system development	BIOLOGICAL_PROCESS	28	0.67554575	4.320956	0.0	0.0	0.0	2035	tags=89%, list=22%, signal=114%
+[TOP]	GO:0045785	positive regulation of cell adhesion	BIOLOGICAL_PROCESS	26	0.68863446	4.312925	0.0	0.0	0.0	2193	tags=92%, list=24%, signal=121%
+[TOP]	GO:0000082	G1/S transition of mitotic cell cycle	BIOLOGICAL_PROCESS	25	0.71931726	4.3049684	0.0	0.0	0.0	2251	tags=96%, list=24%, signal=126%
+[TOP]	GO:0022407	regulation of cell-cell adhesion	BIOLOGICAL_PROCESS	26	0.7149957	4.29359	0.0	0.0	0.0	2306	tags=96%, list=25%, signal=128%
+[TOP]	GO:0010256	endomembrane system organization	BIOLOGICAL_PROCESS	22	0.7667583	4.281412	0.0	0.0	0.0	1337	tags=91%, list=14%, signal=106%
+[TOP]	GO:0060249	anatomical structure homeostasis	BIOLOGICAL_PROCESS	30	0.66400784	4.2691245	0.0	0.0	0.0	1900	tags=87%, list=20%, signal=109%
+[TOP]	GO:0071902	positive regulation of protein serine/threonine kinase activity	BIOLOGICAL_PROCESS	24	0.72904515	4.263154	0.0	0.0	0.0	1758	tags=92%, list=19%, signal=113%
+[TOP]	GO:0042493	response to drug	BIOLOGICAL_PROCESS	28	0.6711693	4.262855	0.0	0.0	0.0	2407	tags=93%, list=26%, signal=125%
+[TOP]	GO:0006323	DNA packaging	BIOLOGICAL_PROCESS	22	0.7591793	4.254678	0.0	0.0	0.0	2251	tags=100%, list=24%, signal=132%
+[TOP]	GO:2000241	regulation of reproductive process	BIOLOGICAL_PROCESS	19	0.8203606	4.2479577	0.0	0.0	0.0	1682	tags=100%, list=18%, signal=122%
+[TOP]	GO:0070371	ERK1 and ERK2 cascade	BIOLOGICAL_PROCESS	22	0.7654428	4.2408276	0.0	0.0	0.0	2193	tags=100%, list=24%, signal=131%
+[TOP]	GO:0033045	regulation of sister chromatid segregation	BIOLOGICAL_PROCESS	17	0.86087424	4.232392	0.0	0.0	0.0	1305	tags=100%, list=14%, signal=116%
+[TOP]	GO:0007517	muscle organ development	BIOLOGICAL_PROCESS	22	0.75250345	4.211162	0.0	0.0	0.0	1469	tags=91%, list=16%, signal=108%
+[TOP]	GO:0060562	epithelial tube morphogenesis	BIOLOGICAL_PROCESS	29	0.644734	4.210392	0.0	0.0	0.0	2035	tags=86%, list=22%, signal=110%
+[TOP]	GO:0043583	ear development	BIOLOGICAL_PROCESS	19	0.78711003	4.200967	0.0	0.0	0.0	1990	tags=100%, list=21%, signal=127%
+[TOP]	GO:0044282	small molecule catabolic process	BIOLOGICAL_PROCESS	27	0.66180444	4.1984863	0.0	0.0	0.0	3156	tags=100%, list=34%, signal=151%
+[TOP]	GO:0051310	metaphase plate congression	BIOLOGICAL_PROCESS	17	0.82590395	4.1884513	0.0	0.0	0.0	537	tags=88%, list=6%, signal=93%
+[TOP]	GO:0045765	regulation of angiogenesis	BIOLOGICAL_PROCESS	23	0.72831136	4.1882777	0.0	0.0	0.0	2134	tags=96%, list=23%, signal=124%
+[TOP]	GO:0014706	striated muscle tissue development	BIOLOGICAL_PROCESS	24	0.7184867	4.1828165	0.0	0.0	0.0	1469	tags=88%, list=16%, signal=104%
+[TOP]	GO:0000910	cytokinesis	BIOLOGICAL_PROCESS	21	0.7544542	4.1773086	0.0	0.0	0.0	968	tags=86%, list=10%, signal=95%
+[TOP]	GO:1901653	cellular response to peptide	BIOLOGICAL_PROCESS	30	0.6386079	4.1720347	0.0	0.0	0.0	2135	tags=87%, list=23%, signal=112%
+[TOP]	GO:0045665	negative regulation of neuron differentiation	BIOLOGICAL_PROCESS	23	0.7523491	4.1712418	0.0	0.0	0.0	2315	tags=100%, list=25%, signal=133%
+[TOP]	GO:0016569	covalent chromatin modification	BIOLOGICAL_PROCESS	35	0.59980536	4.169646	0.0	0.0	0.0	2939	tags=91%, list=32%, signal=133%
+[TOP]	GO:0003018	vascular process in circulatory system	BIOLOGICAL_PROCESS	21	0.74775946	4.163218	0.0	0.0	0.0	1472	tags=90%, list=16%, signal=107%
+[TOP]	GO:0032970	regulation of actin filament-based process	BIOLOGICAL_PROCESS	27	0.67951256	4.1592417	0.0	0.0	0.0	1617	tags=85%, list=17%, signal=103%
+[TOP]	GO:0006753	nucleoside phosphate metabolic process	BIOLOGICAL_PROCESS	27	0.6658743	4.1584816	0.0	0.0	0.0	2087	tags=89%, list=22%, signal=114%
+[TOP]	GO:0042063	gliogenesis	BIOLOGICAL_PROCESS	22	0.74429613	4.153101	0.0	0.0	0.0	1545	tags=91%, list=17%, signal=109%
+[TOP]	GO:0021537	telencephalon development	BIOLOGICAL_PROCESS	17	0.8253643	4.1472826	0.0	0.0	0.0	542	tags=88%, list=6%, signal=94%
+[TOP]	GO:0001837	epithelial to mesenchymal transition	BIOLOGICAL_PROCESS	18	0.80267704	4.1388025	0.0	0.0	0.0	1845	tags=100%, list=20%, signal=125%
+[TOP]	GO:0090287	regulation of cellular response to growth factor stimulus	BIOLOGICAL_PROCESS	20	0.76700497	4.13239	0.0	0.0	0.0	2177	tags=100%, list=23%, signal=130%
+[TOP]	GO:0042326	negative regulation of phosphorylation	BIOLOGICAL_PROCESS	26	0.6758859	4.128463	0.0	0.0	0.0	2668	tags=96%, list=29%, signal=135%
+[TOP]	GO:0016570	histone modification	BIOLOGICAL_PROCESS	34	0.5972102	4.1283026	0.0	0.0	0.0	2939	tags=91%, list=32%, signal=133%
+[TOP]	GO:0006979	response to oxidative stress	BIOLOGICAL_PROCESS	35	0.57382935	4.1214476	0.0	0.0	0.0	2914	tags=89%, list=31%, signal=129%
+[TOP]	GO:0043010	camera-type eye development	BIOLOGICAL_PROCESS	18	0.7970999	4.1087384	0.0	0.0	0.0	1381	tags=94%, list=15%, signal=111%
+[TOP]	GO:0000086	G2/M transition of mitotic cell cycle	BIOLOGICAL_PROCESS	19	0.7780928	4.107682	0.0	0.0	0.0	1585	tags=95%, list=17%, signal=114%
+[TOP]	GO:0045839	negative regulation of mitotic nuclear division	BIOLOGICAL_PROCESS	16	0.8413555	4.101939	0.0	0.0	0.0	1485	tags=100%, list=16%, signal=119%
+[TOP]	GO:0070507	regulation of microtubule cytoskeleton organization	BIOLOGICAL_PROCESS	24	0.69880104	4.0971274	0.0	0.0	0.0	2038	tags=92%, list=22%, signal=117%
+[TOP]	GO:0022411	cellular component disassembly	BIOLOGICAL_PROCESS	26	0.6764261	4.0864944	0.0	0.0	0.0	2663	tags=96%, list=29%, signal=134%
+[TOP]	GO:0032886	regulation of microtubule-based process	BIOLOGICAL_PROCESS	24	0.69880104	4.0808992	0.0	0.0	0.0	2038	tags=92%, list=22%, signal=117%
+[TOP]	GO:0060537	muscle tissue development	BIOLOGICAL_PROCESS	28	0.6650638	4.0768237	0.0	0.0	0.0	1469	tags=82%, list=16%, signal=97%
+[TOP]	GO:0007568	aging	BIOLOGICAL_PROCESS	30	0.62129277	4.0723767	0.0	0.0	0.0	2914	tags=93%, list=31%, signal=136%
+[TOP]	GO:0006816	calcium ion transport	BIOLOGICAL_PROCESS	24	0.7137071	4.070925	0.0	0.0	0.0	1900	tags=92%, list=20%, signal=115%
+[TOP]	GO:0051784	negative regulation of nuclear division	BIOLOGICAL_PROCESS	16	0.8413555	4.068644	0.0	0.0	0.0	1485	tags=100%, list=16%, signal=119%
+[TOP]	GO:0001822	kidney development	BIOLOGICAL_PROCESS	27	0.6714929	4.065356	0.0	0.0	0.0	2035	tags=89%, list=22%, signal=114%
+[TOP]	GO:0008544	epidermis development	BIOLOGICAL_PROCESS	21	0.75618184	4.064446	0.0	0.0	0.0	2278	tags=100%, list=25%, signal=132%
+[TOP]	GO:0010001	glial cell differentiation	BIOLOGICAL_PROCESS	19	0.79061574	4.0637307	0.0	0.0	0.0	1469	tags=95%, list=16%, signal=112%
+[TOP]	GO:0071772	response to BMP	BIOLOGICAL_PROCESS	16	0.833801	4.0633655	0.0	0.0	0.0	1555	tags=100%, list=17%, signal=120%
+[TOP]	GO:0045165	cell fate commitment	BIOLOGICAL_PROCESS	20	0.7593393	4.058704	0.0	0.0	0.0	2248	tags=100%, list=24%, signal=132%
+[TOP]	GO:0060828	regulation of canonical Wnt signaling pathway	BIOLOGICAL_PROCESS	20	0.7416217	4.0539885	0.0	0.0	0.0	1948	tags=95%, list=21%, signal=120%
+[TOP]	GO:0001558	regulation of cell growth	BIOLOGICAL_PROCESS	24	0.69056493	4.0508037	0.0	0.0	0.0	2501	tags=96%, list=27%, signal=131%
+[TOP]	GO:0042110	T cell activation	BIOLOGICAL_PROCESS	25	0.6722955	4.050472	0.0	0.0	0.0	2315	tags=92%, list=25%, signal=122%
+[TOP]	GO:0090092	regulation of transmembrane receptor protein serine/threonine kinase signaling pathway	BIOLOGICAL_PROCESS	20	0.76700497	4.0481963	0.0	0.0	0.0	2177	tags=100%, list=23%, signal=130%
+[TOP]	GO:0035265	organ growth	BIOLOGICAL_PROCESS	17	0.80992985	4.041464	0.0	0.0	0.0	1777	tags=100%, list=19%, signal=123%
+[TOP]	GO:0071773	cellular response to BMP stimulus	BIOLOGICAL_PROCESS	16	0.833801	4.03887	0.0	0.0	0.0	1555	tags=100%, list=17%, signal=120%
+[TOP]	GO:0051098	regulation of binding	BIOLOGICAL_PROCESS	24	0.69361633	4.037446	0.0	0.0	0.0	2086	tags=92%, list=22%, signal=118%
+[TOP]	GO:0071559	response to transforming growth factor beta	BIOLOGICAL_PROCESS	21	0.73717743	4.0354686	0.0	0.0	0.0	2454	tags=100%, list=26%, signal=136%
+[TOP]	GO:0070372	regulation of ERK1 and ERK2 cascade	BIOLOGICAL_PROCESS	20	0.7652775	4.034655	0.0	0.0	0.0	2193	tags=100%, list=24%, signal=131%
+[TOP]	GO:0060070	canonical Wnt signaling pathway	BIOLOGICAL_PROCESS	23	0.7093967	4.0117035	0.0	0.0	0.0	1502	tags=87%, list=16%, signal=103%
+[TOP]	GO:0090407	organophosphate biosynthetic process	BIOLOGICAL_PROCESS	26	0.65092915	3.9905882	0.0	0.0	0.0	2899	tags=96%, list=31%, signal=139%
+[TOP]	GO:0071897	DNA biosynthetic process	BIOLOGICAL_PROCESS	22	0.69364816	3.989142	0.0	0.0	0.0	2014	tags=91%, list=22%, signal=116%
+[TOP]	GO:0002683	negative regulation of immune system process	BIOLOGICAL_PROCESS	23	0.7102749	3.985241	0.0	0.0	0.0	2301	tags=96%, list=25%, signal=127%
+[TOP]	GO:2001251	negative regulation of chromosome organization	BIOLOGICAL_PROCESS	22	0.7136167	3.9782107	0.0	0.0	0.0	2251	tags=95%, list=24%, signal=126%
+[TOP]	GO:0010631	epithelial cell migration	BIOLOGICAL_PROCESS	21	0.71936077	3.9761035	0.0	0.0	0.0	2177	tags=95%, list=23%, signal=124%
+[TOP]	GO:0050000	chromosome localization	BIOLOGICAL_PROCESS	18	0.77687824	3.9744818	0.0	0.0	0.0	537	tags=83%, list=6%, signal=88%
+[TOP]	GO:0051235	maintenance of location	BIOLOGICAL_PROCESS	26	0.6485523	3.9737616	0.0	0.0	0.0	2207	tags=88%, list=24%, signal=116%
+[TOP]	GO:0030278	regulation of ossification	BIOLOGICAL_PROCESS	25	0.6624349	3.9683874	0.0	0.0	0.0	2035	tags=88%, list=22%, signal=112%
+[TOP]	GO:0051303	establishment of chromosome localization	BIOLOGICAL_PROCESS	18	0.77687824	3.9646463	0.0	0.0	0.0	537	tags=83%, list=6%, signal=88%
+[TOP]	GO:0031023	microtubule organizing center organization	BIOLOGICAL_PROCESS	21	0.7178491	3.96262	0.0	0.0	0.0	1749	tags=90%, list=19%, signal=111%
+[TOP]	GO:0009117	nucleotide metabolic process	BIOLOGICAL_PROCESS	25	0.664146	3.9581294	0.0	0.0	0.0	3133	tags=100%, list=34%, signal=151%
+[TOP]	GO:0071560	cellular response to transforming growth factor beta stimulus	BIOLOGICAL_PROCESS	20	0.7370978	3.9560559	0.0	0.0	0.0	2454	tags=100%, list=26%, signal=136%
+[TOP]	GO:0060541	respiratory system development	BIOLOGICAL_PROCESS	22	0.70694095	3.9524095	0.0	0.0	0.0	1469	tags=86%, list=16%, signal=102%
+[TOP]	GO:0030178	negative regulation of Wnt signaling pathway	BIOLOGICAL_PROCESS	19	0.73663753	3.95225	0.0	0.0	0.0	1969	tags=95%, list=21%, signal=120%
+[TOP]	GO:0030010	establishment of cell polarity	BIOLOGICAL_PROCESS	17	0.7984889	3.9491966	0.0	0.0	0.0	1337	tags=94%, list=14%, signal=110%
+[TOP]	GO:0048880	sensory system development	BIOLOGICAL_PROCESS	19	0.7473764	3.9470437	0.0	0.0	0.0	1381	tags=89%, list=15%, signal=105%
+[TOP]	GO:0070838	divalent metal ion transport	BIOLOGICAL_PROCESS	26	0.6431504	3.9456382	0.0	0.0	0.0	1900	tags=85%, list=20%, signal=106%
+[TOP]	GO:0048839	inner ear development	BIOLOGICAL_PROCESS	18	0.78702503	3.9444826	0.0	0.0	0.0	1990	tags=100%, list=21%, signal=127%
+[TOP]	GO:0071375	cellular response to peptide hormone stimulus	BIOLOGICAL_PROCESS	23	0.6846171	3.9426007	0.0	0.0	0.0	2135	tags=91%, list=23%, signal=118%
+[TOP]	GO:0031099	regeneration	BIOLOGICAL_PROCESS	24	0.69229317	3.9350715	0.0	0.0	0.0	2485	tags=96%, list=27%, signal=131%
+[TOP]	GO:0007098	centrosome cycle	BIOLOGICAL_PROCESS	21	0.7178491	3.930366	0.0	0.0	0.0	1749	tags=90%, list=19%, signal=111%
+[TOP]	GO:0043547	positive regulation of GTPase activity	BIOLOGICAL_PROCESS	23	0.6944454	3.9195597	0.0	0.0	0.0	2044	tags=91%, list=22%, signal=117%
+[TOP]	GO:0090132	epithelium migration	BIOLOGICAL_PROCESS	21	0.71936077	3.918587	0.0	0.0	0.0	2177	tags=95%, list=23%, signal=124%
+[TOP]	GO:1904018	positive regulation of vasculature development	BIOLOGICAL_PROCESS	20	0.733956	3.91797	0.0	0.0	0.0	2019	tags=95%, list=22%, signal=121%
+[TOP]	GO:0120031	plasma membrane bounded cell projection assembly	BIOLOGICAL_PROCESS	33	0.5689952	3.9125571	0.0	0.0	0.0	2612	tags=85%, list=28%, signal=118%
+[TOP]	GO:0090130	tissue migration	BIOLOGICAL_PROCESS	21	0.71936077	3.9020019	0.0	0.0	0.0	2177	tags=95%, list=23%, signal=124%
+[TOP]	GO:0071496	cellular response to external stimulus	BIOLOGICAL_PROCESS	24	0.67009616	3.8991504	0.0	0.0	0.0	1917	tags=88%, list=21%, signal=110%
+[TOP]	GO:0001654	eye development	BIOLOGICAL_PROCESS	19	0.7473764	3.8986735	0.0	0.0	0.0	1381	tags=89%, list=15%, signal=105%
+[TOP]	GO:0002237	response to molecule of bacterial origin	BIOLOGICAL_PROCESS	25	0.6453667	3.8951018	0.0	0.0	0.0	2193	tags=88%, list=24%, signal=115%
+[TOP]	GO:0071453	cellular response to oxygen levels	BIOLOGICAL_PROCESS	17	0.7842418	3.89437	0.0	0.0	0.0	1469	tags=94%, list=16%, signal=112%
+[TOP]	GO:0051304	chromosome separation	BIOLOGICAL_PROCESS	16	0.7981734	3.8934534	0.0	0.0	0.0	1305	tags=94%, list=14%, signal=109%
+[TOP]	GO:0001890	placenta development	BIOLOGICAL_PROCESS	19	0.7477003	3.892466	0.0	0.0	0.0	1378	tags=89%, list=15%, signal=105%
+[TOP]	GO:0051056	regulation of small GTPase mediated signal transduction	BIOLOGICAL_PROCESS	19	0.733075	3.8767583	0.0	0.0	0.0	2002	tags=95%, list=22%, signal=121%
+[TOP]	GO:0001933	negative regulation of protein phosphorylation	BIOLOGICAL_PROCESS	23	0.6706377	3.8747916	0.0	0.0	0.0	2668	tags=96%, list=29%, signal=134%
+[TOP]	GO:1990778	protein localization to cell periphery	BIOLOGICAL_PROCESS	24	0.6607529	3.8641374	0.0	0.0	0.0	2777	tags=96%, list=30%, signal=136%
+[TOP]	GO:0018108	peptidyl-tyrosine phosphorylation	BIOLOGICAL_PROCESS	23	0.68008095	3.860997	0.0	0.0	0.0	2177	tags=91%, list=23%, signal=119%
+[TOP]	GO:0061448	connective tissue development	BIOLOGICAL_PROCESS	24	0.65907866	3.8585474	0.0	0.0	0.0	2019	tags=88%, list=22%, signal=112%
+[TOP]	GO:0032102	negative regulation of response to external stimulus	BIOLOGICAL_PROCESS	21	0.7054314	3.8561366	0.0	0.0	0.0	2306	tags=95%, list=25%, signal=126%
+[TOP]	GO:0018212	peptidyl-tyrosine modification	BIOLOGICAL_PROCESS	23	0.68008095	3.8553133	0.0	0.0	0.0	2177	tags=91%, list=23%, signal=119%
+[TOP]	GO:0030509	BMP signaling pathway	BIOLOGICAL_PROCESS	15	0.8337111	3.8552134	0.0	0.0	0.0	1555	tags=100%, list=17%, signal=120%
+[TOP]	GO:0044839	cell cycle G2/M phase transition	BIOLOGICAL_PROCESS	20	0.7307061	3.8463755	0.0	0.0	0.0	1585	tags=90%, list=17%, signal=108%
+[TOP]	GO:0051146	striated muscle cell differentiation	BIOLOGICAL_PROCESS	21	0.70035636	3.8405113	0.0	0.0	0.0	1469	tags=86%, list=16%, signal=102%
+[TOP]	GO:0019216	regulation of lipid metabolic process	BIOLOGICAL_PROCESS	20	0.70999783	3.8363051	0.0	0.0	0.0	2705	tags=100%, list=29%, signal=141%
+[TOP]	GO:0051302	regulation of cell division	BIOLOGICAL_PROCESS	19	0.7209214	3.8354766	0.0	0.0	0.0	649	tags=79%, list=7%, signal=85%
+[TOP]	GO:0090288	negative regulation of cellular response to growth factor stimulus	BIOLOGICAL_PROCESS	16	0.76667386	3.8241274	0.0	0.0	0.0	2177	tags=100%, list=23%, signal=130%
+[TOP]	GO:0019932	second-messenger-mediated signaling	BIOLOGICAL_PROCESS	16	0.78015053	3.8217075	0.0	0.0	0.0	1472	tags=94%, list=16%, signal=111%
+[TOP]	GO:0032386	regulation of intracellular transport	BIOLOGICAL_PROCESS	20	0.71343124	3.8203895	0.0	0.0	0.0	1745	tags=90%, list=19%, signal=111%
+[TOP]	GO:0150063	visual system development	BIOLOGICAL_PROCESS	19	0.7473764	3.810898	0.0	0.0	0.0	1381	tags=89%, list=15%, signal=105%
+[TOP]	GO:0072521	purine-containing compound metabolic process	BIOLOGICAL_PROCESS	22	0.6857648	3.8006594	0.0	0.0	0.0	2087	tags=91%, list=22%, signal=117%
+[TOP]	GO:0000725	recombinational repair	BIOLOGICAL_PROCESS	23	0.6608705	3.7845552	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0016032	viral process	BIOLOGICAL_PROCESS	18	0.7335924	3.780362	0.0	0.0	0.0	2485	tags=100%, list=27%, signal=136%
+[TOP]	GO:0010038	response to metal ion	BIOLOGICAL_PROCESS	25	0.61788046	3.7791867	0.0	0.0	0.0	3190	tags=96%, list=34%, signal=146%
+[TOP]	GO:0032496	response to lipopolysaccharide	BIOLOGICAL_PROCESS	24	0.6402841	3.7786686	0.0	0.0	0.0	2193	tags=88%, list=24%, signal=114%
+[TOP]	GO:0032956	regulation of actin cytoskeleton organization	BIOLOGICAL_PROCESS	23	0.6533901	3.7621841	0.0	0.0	0.0	1617	tags=83%, list=17%, signal=100%
+[TOP]	GO:0031032	actomyosin structure organization	BIOLOGICAL_PROCESS	20	0.70996547	3.7621157	0.0	0.0	0.0	1313	tags=85%, list=14%, signal=99%
+[TOP]	GO:0040013	negative regulation of locomotion	BIOLOGICAL_PROCESS	18	0.7319372	3.75827	0.0	0.0	0.0	1469	tags=89%, list=16%, signal=105%
+[TOP]	GO:0000724	double-strand break repair via homologous recombination	BIOLOGICAL_PROCESS	23	0.6608705	3.7577224	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0043393	regulation of protein binding	BIOLOGICAL_PROCESS	16	0.7764947	3.75708	0.0	0.0	0.0	2086	tags=100%, list=22%, signal=129%
+[TOP]	GO:2001020	regulation of response to DNA damage stimulus	BIOLOGICAL_PROCESS	25	0.6288214	3.7566247	0.0	0.0	0.0	3460	tags=100%, list=37%, signal=159%
+[TOP]	GO:2001233	regulation of apoptotic signaling pathway	BIOLOGICAL_PROCESS	22	0.6743177	3.7534528	0.0	0.0	0.0	2193	tags=91%, list=24%, signal=119%
+[TOP]	GO:0030336	negative regulation of cell migration	BIOLOGICAL_PROCESS	18	0.7319372	3.7508438	0.0	0.0	0.0	1469	tags=89%, list=16%, signal=105%
+[TOP]	GO:1903706	regulation of hemopoiesis	BIOLOGICAL_PROCESS	29	0.5813958	3.7406926	0.0	0.0	0.0	2301	tags=83%, list=25%, signal=110%
+[TOP]	GO:0051348	negative regulation of transferase activity	BIOLOGICAL_PROCESS	20	0.71399266	3.724915	0.0	0.0	0.0	2668	tags=100%, list=29%, signal=140%
+[TOP]	GO:0051271	negative regulation of cellular component movement	BIOLOGICAL_PROCESS	18	0.7319372	3.7182286	0.0	0.0	0.0	1469	tags=89%, list=16%, signal=105%
+[TOP]	GO:0030323	respiratory tube development	BIOLOGICAL_PROCESS	20	0.69312245	3.714072	0.0	0.0	0.0	1469	tags=85%, list=16%, signal=101%
+[TOP]	GO:0034502	protein localization to chromosome	BIOLOGICAL_PROCESS	19	0.71100074	3.7114322	0.0	0.0	0.0	2695	tags=100%, list=29%, signal=141%
+[TOP]	GO:0045926	negative regulation of growth	BIOLOGICAL_PROCESS	20	0.70296913	3.7089949	0.0	0.0	0.0	2306	tags=95%, list=25%, signal=126%
+[TOP]	GO:0051604	protein maturation	BIOLOGICAL_PROCESS	20	0.67901105	3.7048688	0.0	0.0	0.0	2992	tags=100%, list=32%, signal=147%
+[TOP]	GO:0044403	symbiotic process	BIOLOGICAL_PROCESS	20	0.68364286	3.701136	0.0	0.0	0.0	2485	tags=95%, list=27%, signal=129%
+[TOP]	GO:0030324	lung development	BIOLOGICAL_PROCESS	20	0.69312245	3.696389	0.0	0.0	0.0	1469	tags=85%, list=16%, signal=101%
+[TOP]	GO:0050708	regulation of protein secretion	BIOLOGICAL_PROCESS	18	0.70944875	3.6951373	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:0008360	regulation of cell shape	BIOLOGICAL_PROCESS	15	0.7854754	3.6942842	0.0	0.0	0.0	2002	tags=100%, list=22%, signal=127%
+[TOP]	GO:0006874	cellular calcium ion homeostasis	BIOLOGICAL_PROCESS	20	0.6762902	3.6891365	0.0	0.0	0.0	2089	tags=90%, list=23%, signal=116%
+[TOP]	GO:0019221	cytokine-mediated signaling pathway	BIOLOGICAL_PROCESS	19	0.71245533	3.6881	0.0	0.0	0.0	2193	tags=95%, list=24%, signal=124%
+[TOP]	GO:0032465	regulation of cytokinesis	BIOLOGICAL_PROCESS	15	0.79792815	3.6809127	0.0	0.0	0.0	649	tags=87%, list=7%, signal=93%
+[TOP]	GO:0050878	regulation of body fluid levels	BIOLOGICAL_PROCESS	19	0.7002562	3.6787698	0.0	0.0	0.0	2306	tags=95%, list=25%, signal=126%
+[TOP]	GO:0034329	cell junction assembly	BIOLOGICAL_PROCESS	24	0.6360985	3.6782534	0.0	0.0	0.0	1845	tags=83%, list=20%, signal=104%
+[TOP]	GO:0071456	cellular response to hypoxia	BIOLOGICAL_PROCESS	15	0.77621675	3.6774843	0.0	0.0	0.0	1469	tags=93%, list=16%, signal=111%
+[TOP]	GO:0021700	developmental maturation	BIOLOGICAL_PROCESS	18	0.7220423	3.6774073	0.0	0.0	0.0	1045	tags=83%, list=11%, signal=94%
+[TOP]	GO:0006163	purine nucleotide metabolic process	BIOLOGICAL_PROCESS	20	0.67650616	3.6733892	0.0	0.0	0.0	2087	tags=90%, list=22%, signal=116%
+[TOP]	GO:0007219	Notch signaling pathway	BIOLOGICAL_PROCESS	18	0.7115717	3.6650221	0.0	0.0	0.0	2689	tags=100%, list=29%, signal=141%
+[TOP]	GO:0019693	ribose phosphate metabolic process	BIOLOGICAL_PROCESS	20	0.67650616	3.6576073	0.0	0.0	0.0	2087	tags=90%, list=22%, signal=116%
+[TOP]	GO:0060348	bone development	BIOLOGICAL_PROCESS	20	0.6598683	3.6443503	0.0	0.0	0.0	1777	tags=85%, list=19%, signal=105%
+[TOP]	GO:0032147	activation of protein kinase activity	BIOLOGICAL_PROCESS	16	0.74928504	3.6408222	0.0	0.0	0.0	1758	tags=94%, list=19%, signal=115%
+[TOP]	GO:0006275	regulation of DNA replication	BIOLOGICAL_PROCESS	18	0.7088011	3.6395009	0.0	0.0	0.0	652	tags=78%, list=7%, signal=83%
+[TOP]	GO:0045444	fat cell differentiation	BIOLOGICAL_PROCESS	18	0.7173287	3.639096	0.0	0.0	0.0	2120	tags=94%, list=23%, signal=122%
+[TOP]	GO:0002064	epithelial cell development	BIOLOGICAL_PROCESS	20	0.6599978	3.637396	0.0	0.0	0.0	2704	tags=95%, list=29%, signal=134%
+[TOP]	GO:0046578	regulation of Ras protein signal transduction	BIOLOGICAL_PROCESS	17	0.7267134	3.6351953	0.0	0.0	0.0	2002	tags=94%, list=22%, signal=120%
+[TOP]	GO:0048736	appendage development	BIOLOGICAL_PROCESS	17	0.7231516	3.6289186	0.0	0.0	0.0	2035	tags=94%, list=22%, signal=120%
+[TOP]	GO:0048771	tissue remodeling	BIOLOGICAL_PROCESS	17	0.73772264	3.6265187	0.0	0.0	0.0	1900	tags=94%, list=20%, signal=118%
+[TOP]	GO:0031647	regulation of protein stability	BIOLOGICAL_PROCESS	20	0.66506153	3.6259258	0.0	0.0	0.0	2193	tags=90%, list=24%, signal=118%
+[TOP]	GO:0051480	regulation of cytosolic calcium ion concentration	BIOLOGICAL_PROCESS	18	0.7083333	3.625539	0.0	0.0	0.0	1172	tags=83%, list=13%, signal=95%
+[TOP]	GO:1901989	positive regulation of cell cycle phase transition	BIOLOGICAL_PROCESS	15	0.76758397	3.61984	0.0	0.0	0.0	1549	tags=93%, list=17%, signal=112%
+[TOP]	GO:0018209	peptidyl-serine modification	BIOLOGICAL_PROCESS	21	0.6718497	3.618286	0.0	0.0	0.0	1291	tags=81%, list=14%, signal=94%
+[TOP]	GO:0007548	sex differentiation	BIOLOGICAL_PROCESS	18	0.70995253	3.6180973	0.0	0.0	0.0	2704	tags=100%, list=29%, signal=141%
+[TOP]	GO:2000146	negative regulation of cell motility	BIOLOGICAL_PROCESS	18	0.7319372	3.6152446	0.0	0.0	0.0	1469	tags=89%, list=16%, signal=105%
+[TOP]	GO:0035051	cardiocyte differentiation	BIOLOGICAL_PROCESS	15	0.77621675	3.6149807	0.0	0.0	0.0	1469	tags=93%, list=16%, signal=111%
+[TOP]	GO:0016054	organic acid catabolic process	BIOLOGICAL_PROCESS	19	0.6902163	3.6127853	0.0	0.0	0.0	2399	tags=95%, list=26%, signal=127%
+[TOP]	GO:0009259	ribonucleotide metabolic process	BIOLOGICAL_PROCESS	20	0.67650616	3.6120906	0.0	0.0	0.0	2087	tags=90%, list=22%, signal=116%
+[TOP]	GO:0016042	lipid catabolic process	BIOLOGICAL_PROCESS	19	0.67855704	3.6105998	0.0	0.0	0.0	2507	tags=95%, list=27%, signal=130%
+[TOP]	GO:0006631	fatty acid metabolic process	BIOLOGICAL_PROCESS	21	0.67357737	3.607611	0.0	0.0	0.0	3043	tags=100%, list=33%, signal=148%
+[TOP]	GO:0050679	positive regulation of epithelial cell proliferation	BIOLOGICAL_PROCESS	15	0.77621675	3.596048	0.0	0.0	0.0	1469	tags=93%, list=16%, signal=111%
+[TOP]	GO:0007160	cell-matrix adhesion	BIOLOGICAL_PROCESS	17	0.7167836	3.5944223	0.0	0.0	0.0	2094	tags=94%, list=23%, signal=121%
+[TOP]	GO:0045667	regulation of osteoblast differentiation	BIOLOGICAL_PROCESS	17	0.7253103	3.5862179	0.0	0.0	0.0	1469	tags=88%, list=16%, signal=105%
+[TOP]	GO:0051651	maintenance of location in cell	BIOLOGICAL_PROCESS	19	0.6644602	3.5752857	0.0	0.0	0.0	1172	tags=79%, list=13%, signal=90%
+[TOP]	GO:0007224	smoothened signaling pathway	BIOLOGICAL_PROCESS	18	0.69228554	3.5701866	0.0	0.0	0.0	2352	tags=94%, list=25%, signal=126%
+[TOP]	GO:1902903	regulation of supramolecular fiber organization	BIOLOGICAL_PROCESS	25	0.58871335	3.5672047	0.0	0.0	0.0	3460	tags=96%, list=37%, signal=153%
+[TOP]	GO:0097746	regulation of blood vessel diameter	BIOLOGICAL_PROCESS	15	0.73231906	3.5633528	0.0	0.0	0.0	1257	tags=87%, list=14%, signal=100%
+[TOP]	GO:0003007	heart morphogenesis	BIOLOGICAL_PROCESS	19	0.6851367	3.5631635	0.0	0.0	0.0	1469	tags=84%, list=16%, signal=100%
+[TOP]	GO:0046394	carboxylic acid biosynthetic process	BIOLOGICAL_PROCESS	17	0.70976794	3.5546775	0.0	0.0	0.0	2705	tags=100%, list=29%, signal=141%
+[TOP]	GO:0046395	carboxylic acid catabolic process	BIOLOGICAL_PROCESS	19	0.6902163	3.5543163	0.0	0.0	0.0	2399	tags=95%, list=26%, signal=127%
+[TOP]	GO:0048660	regulation of smooth muscle cell proliferation	BIOLOGICAL_PROCESS	15	0.76801556	3.5540488	0.0	0.0	0.0	1545	tags=93%, list=17%, signal=112%
+[TOP]	GO:0022412	cellular process involved in reproduction in multicellular organism	BIOLOGICAL_PROCESS	20	0.6712265	3.553458	0.0	0.0	0.0	2600	tags=95%, list=28%, signal=132%
+[TOP]	GO:0007204	positive regulation of cytosolic calcium ion concentration	BIOLOGICAL_PROCESS	17	0.69843495	3.553237	0.0	0.0	0.0	1172	tags=82%, list=13%, signal=94%
+[TOP]	GO:0036294	cellular response to decreased oxygen levels	BIOLOGICAL_PROCESS	15	0.77621675	3.5529368	0.0	0.0	0.0	1469	tags=93%, list=16%, signal=111%
+[TOP]	GO:0055001	muscle cell development	BIOLOGICAL_PROCESS	17	0.7249865	3.5521657	0.0	0.0	0.0	1472	tags=88%, list=16%, signal=105%
+[TOP]	GO:0030879	mammary gland development	BIOLOGICAL_PROCESS	17	0.71149486	3.5520039	0.0	0.0	0.0	2689	tags=100%, list=29%, signal=141%
+[TOP]	GO:0051222	positive regulation of protein transport	BIOLOGICAL_PROCESS	18	0.70944875	3.5516906	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:0048659	smooth muscle cell proliferation	BIOLOGICAL_PROCESS	15	0.76801556	3.5450342	0.0	0.0	0.0	1545	tags=93%, list=17%, signal=112%
+[TOP]	GO:0010212	response to ionizing radiation	BIOLOGICAL_PROCESS	23	0.61728424	3.541015	0.0	0.0	0.0	3162	tags=96%, list=34%, signal=145%
+[TOP]	GO:0019058	viral life cycle	BIOLOGICAL_PROCESS	15	0.7516996	3.5298488	0.0	0.0	0.0	2315	tags=100%, list=25%, signal=133%
+[TOP]	GO:0050730	regulation of peptidyl-tyrosine phosphorylation	BIOLOGICAL_PROCESS	17	0.71376145	3.5274687	0.0	0.0	0.0	2668	tags=100%, list=29%, signal=140%
+[TOP]	GO:0007159	leukocyte cell-cell adhesion	BIOLOGICAL_PROCESS	17	0.7060982	3.5269003	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:0062012	regulation of small molecule metabolic process	BIOLOGICAL_PROCESS	17	0.72174853	3.5267947	0.0	0.0	0.0	1502	tags=88%, list=16%, signal=105%
+[TOP]	GO:0007162	negative regulation of cell adhesion	BIOLOGICAL_PROCESS	16	0.752752	3.5263765	0.0	0.0	0.0	2306	tags=100%, list=25%, signal=133%
+[TOP]	GO:0061564	axon development	BIOLOGICAL_PROCESS	19	0.6614431	3.525208	0.0	0.0	0.0	2177	tags=89%, list=23%, signal=117%
+[TOP]	GO:0042176	regulation of protein catabolic process	BIOLOGICAL_PROCESS	22	0.6165522	3.5239365	0.0	0.0	0.0	2306	tags=86%, list=25%, signal=115%
+[TOP]	GO:0060173	limb development	BIOLOGICAL_PROCESS	17	0.7231516	3.5212023	0.0	0.0	0.0	2035	tags=94%, list=22%, signal=120%
+[TOP]	GO:0072006	nephron development	BIOLOGICAL_PROCESS	18	0.67627376	3.5202813	0.0	0.0	0.0	1469	tags=83%, list=16%, signal=99%
+[TOP]	GO:0009150	purine ribonucleotide metabolic process	BIOLOGICAL_PROCESS	19	0.67115915	3.5102224	0.0	0.0	0.0	2087	tags=89%, list=22%, signal=115%
+[TOP]	GO:0016053	organic acid biosynthetic process	BIOLOGICAL_PROCESS	17	0.70976794	3.5051649	0.0	0.0	0.0	2705	tags=100%, list=29%, signal=141%
+[TOP]	GO:0045137	development of primary sexual characteristics	BIOLOGICAL_PROCESS	17	0.7098759	3.5037644	0.0	0.0	0.0	2704	tags=100%, list=29%, signal=141%
+[TOP]	GO:1904951	positive regulation of establishment of protein localization	BIOLOGICAL_PROCESS	18	0.70944875	3.4915824	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:0040029	regulation of gene expression, epigenetic	BIOLOGICAL_PROCESS	16	0.70870656	3.4881594	0.0	0.0	0.0	2134	tags=94%, list=23%, signal=122%
+[TOP]	GO:0090257	regulation of muscle system process	BIOLOGICAL_PROCESS	15	0.7464336	3.4817555	0.0	0.0	0.0	1745	tags=93%, list=19%, signal=115%
+[TOP]	GO:0016485	protein processing	BIOLOGICAL_PROCESS	16	0.70008636	3.4781606	0.0	0.0	0.0	2794	tags=100%, list=30%, signal=143%
+[TOP]	GO:0051053	negative regulation of DNA metabolic process	BIOLOGICAL_PROCESS	19	0.6605851	3.4689727	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0009952	anterior/posterior pattern specification	BIOLOGICAL_PROCESS	15	0.7356427	3.46867	0.0	0.0	0.0	1845	tags=93%, list=20%, signal=116%
+[TOP]	GO:0010498	proteasomal protein catabolic process	BIOLOGICAL_PROCESS	25	0.5812898	3.4595618	0.0	0.0	0.0	3900	tags=100%, list=42%, signal=172%
+[TOP]	GO:0090596	sensory organ morphogenesis	BIOLOGICAL_PROCESS	16	0.72736347	3.4557245	0.0	0.0	0.0	1381	tags=88%, list=15%, signal=103%
+[TOP]	GO:0018105	peptidyl-serine phosphorylation	BIOLOGICAL_PROCESS	20	0.6622328	3.4511387	0.0	0.0	0.0	1291	tags=80%, list=14%, signal=93%
+[TOP]	GO:0006575	cellular modified amino acid metabolic process	BIOLOGICAL_PROCESS	17	0.6872099	3.449772	0.0	0.0	0.0	2914	tags=100%, list=31%, signal=145%
+[TOP]	GO:1902749	regulation of cell cycle G2/M phase transition	BIOLOGICAL_PROCESS	16	0.7160452	3.4437065	0.0	0.0	0.0	2066	tags=94%, list=22%, signal=120%
+[TOP]	GO:0046777	protein autophosphorylation	BIOLOGICAL_PROCESS	18	0.6740429	3.4422224	0.0	0.0	0.0	2521	tags=94%, list=27%, signal=129%
+[TOP]	GO:0045862	positive regulation of proteolysis	BIOLOGICAL_PROCESS	21	0.62217903	3.4402945	0.0	0.0	0.0	2193	tags=86%, list=24%, signal=112%
+[TOP]	GO:0046486	glycerolipid metabolic process	BIOLOGICAL_PROCESS	17	0.68882895	3.4326456	0.0	0.0	0.0	2899	tags=100%, list=31%, signal=145%
+[TOP]	GO:0043903	regulation of symbiotic process	BIOLOGICAL_PROCESS	18	0.68167096	3.4300835	0.0	0.0	0.0	2966	tags=100%, list=32%, signal=147%
+[TOP]	GO:0045766	positive regulation of angiogenesis	BIOLOGICAL_PROCESS	16	0.7211175	3.4244297	0.0	0.0	0.0	2019	tags=94%, list=22%, signal=120%
+[TOP]	GO:0071695	anatomical structure maturation	BIOLOGICAL_PROCESS	15	0.72094536	3.4227417	0.0	0.0	0.0	2600	tags=100%, list=28%, signal=139%
+[TOP]	GO:0035296	regulation of tube diameter	BIOLOGICAL_PROCESS	15	0.73231906	3.419082	0.0	0.0	0.0	1257	tags=87%, list=14%, signal=100%
+[TOP]	GO:0071241	cellular response to inorganic substance	BIOLOGICAL_PROCESS	15	0.73039824	3.413176	0.0	0.0	0.0	656	tags=80%, list=7%, signal=86%
+[TOP]	GO:0009612	response to mechanical stimulus	BIOLOGICAL_PROCESS	18	0.6574914	3.4128723	0.0	0.0	0.0	3190	tags=100%, list=34%, signal=152%
+[TOP]	GO:0010876	lipid localization	BIOLOGICAL_PROCESS	19	0.6582044	3.4103518	0.0	0.0	0.0	2207	tags=89%, list=24%, signal=117%
+[TOP]	GO:0070588	calcium ion transmembrane transport	BIOLOGICAL_PROCESS	15	0.7414914	3.4094386	0.0	0.0	0.0	1172	tags=87%, list=13%, signal=99%
+[TOP]	GO:0071478	cellular response to radiation	BIOLOGICAL_PROCESS	22	0.6155802	3.4067044	0.0	0.0	0.0	2315	tags=86%, list=25%, signal=115%
+[TOP]	GO:0000302	response to reactive oxygen species	BIOLOGICAL_PROCESS	19	0.6572896	3.402362	0.0	0.0	0.0	2704	tags=95%, list=29%, signal=133%
+[TOP]	GO:1902806	regulation of cell cycle G1/S phase transition	BIOLOGICAL_PROCESS	16	0.7040659	3.4011245	0.0	0.0	0.0	2177	tags=94%, list=23%, signal=122%
+[TOP]	GO:0033673	negative regulation of kinase activity	BIOLOGICAL_PROCESS	16	0.71368444	3.400815	0.0	0.0	0.0	2668	tags=100%, list=29%, signal=140%
+[TOP]	GO:0072073	kidney epithelium development	BIOLOGICAL_PROCESS	18	0.67084056	3.399191	0.0	0.0	0.0	2035	tags=89%, list=22%, signal=114%
+[TOP]	GO:0097193	intrinsic apoptotic signaling pathway	BIOLOGICAL_PROCESS	21	0.6259583	3.3987155	0.0	0.0	0.0	2600	tags=90%, list=28%, signal=125%
+[TOP]	GO:0030099	myeloid cell differentiation	BIOLOGICAL_PROCESS	28	0.5397666	3.396792	0.0	0.0	0.0	4286	tags=100%, list=46%, signal=185%
+[TOP]	GO:0035150	regulation of tube size	BIOLOGICAL_PROCESS	15	0.73231906	3.396151	0.0	0.0	0.0	1257	tags=87%, list=14%, signal=100%
+[TOP]	GO:0007015	actin filament organization	BIOLOGICAL_PROCESS	26	0.5729257	3.3873017	0.0	0.0	0.0	2193	tags=81%, list=24%, signal=105%
+[TOP]	GO:0072593	reactive oxygen species metabolic process	BIOLOGICAL_PROCESS	18	0.660154	3.3790965	0.0	0.0	0.0	2134	tags=89%, list=23%, signal=115%
+[TOP]	GO:0006066	alcohol metabolic process	BIOLOGICAL_PROCESS	20	0.645325	3.3790867	0.0	0.0	0.0	3304	tags=100%, list=36%, signal=155%
+[TOP]	GO:0090090	negative regulation of canonical Wnt signaling pathway	BIOLOGICAL_PROCESS	15	0.72452796	3.3606958	0.0	0.0	0.0	1948	tags=93%, list=21%, signal=118%
+[TOP]	GO:0051169	nuclear transport	BIOLOGICAL_PROCESS	20	0.60926366	3.3605008	0.0	0.0	0.0	3638	tags=100%, list=39%, signal=164%
+[TOP]	GO:0043588	skin development	BIOLOGICAL_PROCESS	16	0.69143915	3.358047	0.0	0.0	0.0	2294	tags=94%, list=25%, signal=124%
+[TOP]	GO:0009636	response to toxic substance	BIOLOGICAL_PROCESS	18	0.63820523	3.3509908	0.0	0.0	0.0	1306	tags=78%, list=14%, signal=90%
+[TOP]	GO:0051054	positive regulation of DNA metabolic process	BIOLOGICAL_PROCESS	19	0.6284141	3.350789	0.0	0.0	0.0	3460	tags=100%, list=37%, signal=159%
+[TOP]	GO:0006869	lipid transport	BIOLOGICAL_PROCESS	18	0.65695167	3.346977	0.0	0.0	0.0	3195	tags=100%, list=34%, signal=152%
+[TOP]	GO:0007050	cell cycle arrest	BIOLOGICAL_PROCESS	19	0.6465451	3.3439107	0.0	0.0	0.0	2315	tags=89%, list=25%, signal=119%
+[TOP]	GO:0022409	positive regulation of cell-cell adhesion	BIOLOGICAL_PROCESS	16	0.7023392	3.3429062	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:1903037	regulation of leukocyte cell-cell adhesion	BIOLOGICAL_PROCESS	16	0.7023392	3.3417232	0.0	0.0	0.0	2193	tags=94%, list=24%, signal=123%
+[TOP]	GO:0035108	limb morphogenesis	BIOLOGICAL_PROCESS	15	0.7151398	3.3396528	0.0	0.0	0.0	2035	tags=93%, list=22%, signal=119%
+[TOP]	GO:0002244	hematopoietic progenitor cell differentiation	BIOLOGICAL_PROCESS	18	0.6644718	3.337077	0.0	0.0	0.0	2094	tags=89%, list=23%, signal=115%
+[TOP]	GO:0062197	cellular response to chemical stress	BIOLOGICAL_PROCESS	24	0.5747462	3.3337939	0.0	0.0	0.0	3960	tags=100%, list=43%, signal=174%
+[TOP]	GO:0048638	regulation of developmental growth	BIOLOGICAL_PROCESS	15	0.7151398	3.3308482	0.0	0.0	0.0	2035	tags=93%, list=22%, signal=119%
+[TOP]	GO:0009896	positive regulation of catabolic process	BIOLOGICAL_PROCESS	21	0.5920527	3.3250616	0.0	0.0	0.0	2914	tags=90%, list=31%, signal=132%
+[TOP]	GO:0035107	appendage morphogenesis	BIOLOGICAL_PROCESS	15	0.7151398	3.3238385	0.0	0.0	0.0	2035	tags=93%, list=22%, signal=119%
+[TOP]	GO:0030098	lymphocyte differentiation	BIOLOGICAL_PROCESS	18	0.6555124	3.3229873	0.0	0.0	0.0	2177	tags=89%, list=23%, signal=116%
+[TOP]	GO:0009100	glycoprotein metabolic process	BIOLOGICAL_PROCESS	28	0.5305814	3.3223238	0.0	0.0	0.0	4371	tags=100%, list=47%, signal=188%
+[TOP]	GO:0010959	regulation of metal ion transport	BIOLOGICAL_PROCESS	18	0.6574914	3.3114421	0.0	0.0	0.0	3190	tags=100%, list=34%, signal=152%
+[TOP]	GO:0007292	female gamete generation	BIOLOGICAL_PROCESS	17	0.66216946	3.299068	0.0	0.0	0.0	2600	tags=94%, list=28%, signal=130%
+[TOP]	GO:0030856	regulation of epithelial cell differentiation	BIOLOGICAL_PROCESS	15	0.7151398	3.2952893	0.0	0.0	0.0	2035	tags=93%, list=22%, signal=119%
+[TOP]	GO:1903829	positive regulation of cellular protein localization	BIOLOGICAL_PROCESS	21	0.60609007	3.2872012	0.0	0.0	0.0	1900	tags=81%, list=20%, signal=102%
+[TOP]	GO:0009416	response to light stimulus	BIOLOGICAL_PROCESS	19	0.6360222	3.2845297	0.0	0.0	0.0	2901	tags=95%, list=31%, signal=138%
+[TOP]	GO:0031668	cellular response to extracellular stimulus	BIOLOGICAL_PROCESS	15	0.7026438	3.2800958	0.0	0.0	0.0	1532	tags=87%, list=17%, signal=104%
+[TOP]	GO:0006790	sulfur compound metabolic process	BIOLOGICAL_PROCESS	20	0.6233967	3.278871	0.0	0.0	0.0	3043	tags=95%, list=33%, signal=141%
+[TOP]	GO:1901361	organic cyclic compound catabolic process	BIOLOGICAL_PROCESS	23	0.55456734	3.2775857	0.0	0.0	0.0	2532	tags=83%, list=27%, signal=113%
+[TOP]	GO:0001763	morphogenesis of a branching structure	BIOLOGICAL_PROCESS	19	0.61323774	3.2716913	0.0	0.0	0.0	2135	tags=84%, list=23%, signal=109%
+[TOP]	GO:0051216	cartilage development	BIOLOGICAL_PROCESS	17	0.66594714	3.26783	0.0	0.0	0.0	2019	tags=88%, list=22%, signal=113%
+[TOP]	GO:0050863	regulation of T cell activation	BIOLOGICAL_PROCESS	15	0.6980901	3.2658942	0.0	0.0	0.0	2193	tags=93%, list=24%, signal=122%
+[TOP]	GO:0007018	microtubule-based movement	BIOLOGICAL_PROCESS	19	0.6101695	3.2601528	0.0	0.0	0.0	3629	tags=100%, list=39%, signal=164%
+[TOP]	GO:0061982	meiosis I cell cycle process	BIOLOGICAL_PROCESS	17	0.653211	3.2416089	0.0	0.0	0.0	1045	tags=76%, list=11%, signal=86%
+[TOP]	GO:0008406	gonad development	BIOLOGICAL_PROCESS	15	0.70972276	3.237479	0.0	0.0	0.0	2704	tags=100%, list=29%, signal=141%
+[TOP]	GO:0045927	positive regulation of growth	BIOLOGICAL_PROCESS	16	0.6690994	3.2334793	0.0	0.0	0.0	2501	tags=94%, list=27%, signal=128%
+[TOP]	GO:0051259	protein complex oligomerization	BIOLOGICAL_PROCESS	17	0.6574204	3.2272775	0.0	0.0	0.0	3190	tags=100%, list=34%, signal=152%
+[TOP]	GO:0045666	positive regulation of neuron differentiation	BIOLOGICAL_PROCESS	20	0.60275316	3.2236242	0.0	0.0	0.0	2306	tags=85%, list=25%, signal=113%
+[TOP]	GO:0052547	regulation of peptidase activity	BIOLOGICAL_PROCESS	15	0.6858962	3.2201457	0.0	0.0	0.0	2306	tags=93%, list=25%, signal=124%
+[TOP]	GO:0050867	positive regulation of cell activation	BIOLOGICAL_PROCESS	15	0.6980901	3.2191916	0.0	0.0	0.0	2193	tags=93%, list=24%, signal=122%
+[TOP]	GO:0021915	neural tube development	BIOLOGICAL_PROCESS	17	0.6574204	3.2166836	0.0	0.0	0.0	3190	tags=100%, list=34%, signal=152%
+[TOP]	GO:0001659	temperature homeostasis	BIOLOGICAL_PROCESS	15	0.6998166	3.214913	0.0	0.0	0.0	2177	tags=93%, list=23%, signal=122%
+[TOP]	GO:0032200	telomere organization	BIOLOGICAL_PROCESS	16	0.66037124	3.205975	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0061138	morphogenesis of a branching epithelium	BIOLOGICAL_PROCESS	19	0.61323774	3.2048242	0.0	0.0	0.0	2135	tags=84%, list=23%, signal=109%
+[TOP]	GO:0031109	microtubule polymerization or depolymerization	BIOLOGICAL_PROCESS	16	0.6564591	3.1993773	0.0	0.0	0.0	2038	tags=88%, list=22%, signal=112%
+[TOP]	GO:0097191	extrinsic apoptotic signaling pathway	BIOLOGICAL_PROCESS	15	0.6980901	3.196227	0.0	0.0	0.0	2193	tags=93%, list=24%, signal=122%
+[TOP]	GO:0043161	proteasome-mediated ubiquitin-dependent protein catabolic process	BIOLOGICAL_PROCESS	19	0.60952175	3.1949706	0.0	0.0	0.0	3635	tags=100%, list=39%, signal=164%
+[TOP]	GO:0097305	response to alcohol	BIOLOGICAL_PROCESS	18	0.6306851	3.1938765	0.0	0.0	0.0	2407	tags=89%, list=26%, signal=120%
+[TOP]	GO:0006913	nucleocytoplasmic transport	BIOLOGICAL_PROCESS	20	0.60926366	3.190798	0.0	0.0	0.0	3638	tags=100%, list=39%, signal=164%
+[TOP]	GO:0031570	DNA integrity checkpoint	BIOLOGICAL_PROCESS	17	0.63399893	3.1895998	0.0	0.0	0.0	2315	tags=88%, list=25%, signal=117%
+[TOP]	GO:0006091	generation of precursor metabolites and energy	BIOLOGICAL_PROCESS	17	0.63637346	3.18939	0.0	0.0	0.0	2293	tags=88%, list=25%, signal=117%
+[TOP]	GO:0006644	phospholipid metabolic process	BIOLOGICAL_PROCESS	20	0.58883613	3.1836758	0.0	0.0	0.0	2899	tags=90%, list=31%, signal=131%
+[TOP]	GO:0034599	cellular response to oxidative stress	BIOLOGICAL_PROCESS	19	0.6192321	3.1818576	0.0	0.0	0.0	2568	tags=89%, list=28%, signal=123%
+[TOP]	GO:0000723	telomere maintenance	BIOLOGICAL_PROCESS	16	0.66037124	3.1810114	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0090305	nucleic acid phosphodiester bond hydrolysis	BIOLOGICAL_PROCESS	17	0.64414465	3.1601446	0.0	0.0	0.0	2767	tags=94%, list=30%, signal=134%
+[TOP]	GO:0006470	protein dephosphorylation	BIOLOGICAL_PROCESS	16	0.6634875	3.1559165	0.0	0.0	0.0	2553	tags=94%, list=28%, signal=129%
+[TOP]	GO:0032392	DNA geometric change	BIOLOGICAL_PROCESS	16	0.66037124	3.15479	0.0	0.0	0.0	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:1903320	regulation of protein modification by small protein conjugation or removal	BIOLOGICAL_PROCESS	15	0.68706167	3.153055	0.0	0.0	0.0	2914	tags=100%, list=31%, signal=146%
+[TOP]	GO:0034765	regulation of ion transmembrane transport	BIOLOGICAL_PROCESS	16	0.65734947	3.1500528	0.0	0.0	0.0	3190	tags=100%, list=34%, signal=152%
+[TOP]	GO:0019439	aromatic compound catabolic process	BIOLOGICAL_PROCESS	22	0.54658353	3.1476326	0.0	0.0	0.0	2532	tags=82%, list=27%, signal=112%
+[TOP]	GO:0016311	dephosphorylation	BIOLOGICAL_PROCESS	24	0.5416667	3.1474538	0.0	0.0	0.0	3106	tags=88%, list=33%, signal=131%
+[TOP]	GO:0061008	hepaticobiliary system development	BIOLOGICAL_PROCESS	18	0.6235967	3.136796	0.0	4.883078E-6	0.001	3504	tags=100%, list=38%, signal=160%
+[TOP]	GO:0032868	response to insulin	BIOLOGICAL_PROCESS	16	0.6459907	3.1367009	0.0	4.8700563E-6	0.001	2135	tags=88%, list=23%, signal=113%
+[TOP]	GO:0072659	protein localization to plasma membrane	BIOLOGICAL_PROCESS	16	0.6393131	3.128847	0.0	4.857104E-6	0.001	2777	tags=94%, list=30%, signal=134%
+[TOP]	GO:0007127	meiosis I	BIOLOGICAL_PROCESS	16	0.6403923	3.1271384	0.0	4.8442207E-6	0.001	2767	tags=94%, list=30%, signal=133%
+[TOP]	GO:0007409	axonogenesis	BIOLOGICAL_PROCESS	16	0.65678287	3.123617	0.0	4.8314055E-6	0.001	2035	tags=88%, list=22%, signal=112%
+[TOP]	GO:0001889	liver development	BIOLOGICAL_PROCESS	18	0.6235967	3.1118839	0.0	4.8186575E-6	0.001	3504	tags=100%, list=38%, signal=160%
+[TOP]	GO:0048705	skeletal system morphogenesis	BIOLOGICAL_PROCESS	15	0.65548724	3.1109116	0.0	4.805977E-6	0.001	1969	tags=87%, list=21%, signal=110%
+[TOP]	GO:0006282	regulation of DNA repair	BIOLOGICAL_PROCESS	17	0.6282785	3.093781	0.0	4.7933627E-6	0.001	3460	tags=100%, list=37%, signal=159%
+[TOP]	GO:0032508	DNA duplex unwinding	BIOLOGICAL_PROCESS	15	0.6603001	3.0919225	0.0	4.780815E-6	0.001	3162	tags=100%, list=34%, signal=151%
+[TOP]	GO:0050727	regulation of inflammatory response	BIOLOGICAL_PROCESS	16	0.6397313	3.0812643	0.0	4.768332E-6	0.001	2193	tags=88%, list=24%, signal=114%
+[TOP]	GO:0034504	protein localization to nucleus	BIOLOGICAL_PROCESS	15	0.66293305	3.0710793	0.0	4.7559147E-6	0.001	1900	tags=87%, list=20%, signal=109%
+[TOP]	GO:0072594	establishment of protein localization to organelle	BIOLOGICAL_PROCESS	19	0.5931067	3.0611792	0.0	4.7435615E-6	0.001	2810	tags=89%, list=30%, signal=128%
+[TOP]	GO:0046700	heterocycle catabolic process	BIOLOGICAL_PROCESS	22	0.54658353	3.0541532	0.0	4.7312724E-6	0.001	2532	tags=82%, list=27%, signal=112%
+[TOP]	GO:0034612	response to tumor necrosis factor	BIOLOGICAL_PROCESS	16	0.65193987	3.04314	0.0	4.719047E-6	0.001	2660	tags=94%, list=29%, signal=131%
+[TOP]	GO:0051495	positive regulation of cytoskeleton organization	BIOLOGICAL_PROCESS	16	0.6397313	3.0416214	0.0	4.7068843E-6	0.001	2193	tags=88%, list=24%, signal=114%
+[TOP]	GO:0048562	embryonic organ morphogenesis	BIOLOGICAL_PROCESS	17	0.6101457	3.0331497	0.0	4.6947844E-6	0.001	1990	tags=82%, list=21%, signal=105%
+[TOP]	GO:0042542	response to hydrogen peroxide	BIOLOGICAL_PROCESS	15	0.64294815	3.029847	0.0	4.6827463E-6	0.001	2704	tags=93%, list=29%, signal=131%
+[TOP]	GO:0031331	positive regulation of cellular catabolic process	BIOLOGICAL_PROCESS	19	0.58187926	3.0202315	0.0	4.67077E-6	0.001	2914	tags=89%, list=31%, signal=130%
+[TOP]	GO:0048754	branching morphogenesis of an epithelial tube	BIOLOGICAL_PROCESS	18	0.61517704	3.0102262	0.0	4.6588552E-6	0.001	2035	tags=83%, list=22%, signal=107%
+[TOP]	GO:0043254	regulation of protein-containing complex assembly	BIOLOGICAL_PROCESS	21	0.53849477	3.0009346	0.0	4.6470004E-6	0.001	4294	tags=100%, list=46%, signal=186%
+[TOP]	GO:0071216	cellular response to biotic stimulus	BIOLOGICAL_PROCESS	15	0.6476962	3.0004177	0.0	4.6352056E-6	0.001	2660	tags=93%, list=29%, signal=131%
+[TOP]	GO:0001818	negative regulation of cytokine production	BIOLOGICAL_PROCESS	15	0.63131547	2.98492	0.0	4.6234713E-6	0.001	2193	tags=87%, list=24%, signal=113%
+[TOP]	GO:0044782	cilium organization	BIOLOGICAL_PROCESS	21	0.5387107	2.9788144	0.0	4.6117957E-6	0.001	3850	tags=95%, list=41%, signal=162%
+[TOP]	GO:0031346	positive regulation of cell projection organization	BIOLOGICAL_PROCESS	20	0.5526452	2.9626577	0.0	4.600179E-6	0.001	2306	tags=80%, list=25%, signal=106%
+[TOP]	GO:0018205	peptidyl-lysine modification	BIOLOGICAL_PROCESS	20	0.53982943	2.951042	0.0	4.588621E-6	0.001	3817	tags=95%, list=41%, signal=161%
+[TOP]	GO:2000377	regulation of reactive oxygen species metabolic process	BIOLOGICAL_PROCESS	15	0.63768214	2.9510028	0.0	4.5771208E-6	0.001	2134	tags=87%, list=23%, signal=112%
+[TOP]	GO:0032259	methylation	BIOLOGICAL_PROCESS	16	0.6038069	2.9454963	0.0	4.565678E-6	0.001	3106	tags=94%, list=33%, signal=141%
+[TOP]	GO:0044270	cellular nitrogen compound catabolic process	BIOLOGICAL_PROCESS	21	0.5378469	2.945328	0.0	4.5542924E-6	0.001	2532	tags=81%, list=27%, signal=111%
+[TOP]	GO:0032103	positive regulation of response to external stimulus	BIOLOGICAL_PROCESS	17	0.59794927	2.939311	0.0	4.542963E-6	0.001	3195	tags=94%, list=34%, signal=143%
+[TOP]	GO:0006333	chromatin assembly or disassembly	BIOLOGICAL_PROCESS	15	0.6250567	2.9274151	0.0	4.53169E-6	0.001	2251	tags=87%, list=24%, signal=114%
+[TOP]	GO:0009101	glycoprotein biosynthetic process	BIOLOGICAL_PROCESS	21	0.53018034	2.921739	0.0	4.5204733E-6	0.001	4371	tags=100%, list=47%, signal=189%
+[TOP]	GO:0110053	regulation of actin filament organization	BIOLOGICAL_PROCESS	16	0.6009605	2.906803	0.0	4.5093116E-6	0.001	1392	tags=75%, list=15%, signal=88%
+[TOP]	GO:0015711	organic anion transport	BIOLOGICAL_PROCESS	15	0.614611	2.9007351	0.0	4.498205E-6	0.001	1729	tags=80%, list=19%, signal=98%
+[TOP]	GO:0002263	cell activation involved in immune response	BIOLOGICAL_PROCESS	15	0.6216899	2.8923743	0.0	4.4871526E-6	0.001	2901	tags=93%, list=31%, signal=136%
+[TOP]	GO:0009411	response to UV	BIOLOGICAL_PROCESS	15	0.6216899	2.8907287	0.0	4.476155E-6	0.001	2901	tags=93%, list=31%, signal=136%
+[TOP]	GO:0044262	cellular carbohydrate metabolic process	BIOLOGICAL_PROCESS	16	0.59841084	2.864175	0.0	4.4652106E-6	0.001	3156	tags=94%, list=34%, signal=142%
+[TOP]	GO:0070085	glycosylation	BIOLOGICAL_PROCESS	19	0.56439596	2.859584	0.0	4.45432E-6	0.001	4053	tags=100%, list=44%, signal=177%
+[TOP]	GO:0002697	regulation of immune effector process	BIOLOGICAL_PROCESS	15	0.61467576	2.8582664	0.0	4.443482E-6	0.001	2966	tags=93%, list=32%, signal=137%
+[TOP]	GO:0060326	cell chemotaxis	BIOLOGICAL_PROCESS	16	0.5942019	2.8566668	0.0	4.432697E-6	0.001	3195	tags=94%, list=34%, signal=143%
+[TOP]	GO:0070997	neuron death	BIOLOGICAL_PROCESS	18	0.5456247	2.8519747	0.0	4.421964E-6	0.001	3195	tags=89%, list=34%, signal=135%
+[TOP]	GO:0034248	regulation of cellular amide metabolic process	BIOLOGICAL_PROCESS	16	0.60087955	2.8483076	0.0	4.411283E-6	0.001	2553	tags=88%, list=28%, signal=120%
+[TOP]	GO:0060271	cilium assembly	BIOLOGICAL_PROCESS	20	0.53626645	2.8479266	0.0	4.4006533E-6	0.001	3850	tags=95%, list=41%, signal=162%
+[TOP]	GO:0043413	macromolecule glycosylation	BIOLOGICAL_PROCESS	17	0.56427413	2.8162072	0.0	8.894674E-6	0.002	4053	tags=100%, list=44%, signal=177%
+[TOP]	GO:0048872	homeostasis of number of cells	BIOLOGICAL_PROCESS	19	0.53924215	2.815982	0.0	8.873344E-6	0.002	4286	tags=100%, list=46%, signal=185%
+[TOP]	GO:0043414	macromolecule methylation	BIOLOGICAL_PROCESS	15	0.5995684	2.809789	0.0	8.852116E-6	0.002	3106	tags=93%, list=33%, signal=140%
+[TOP]	GO:0006486	protein glycosylation	BIOLOGICAL_PROCESS	17	0.56427413	2.7957425	0.0	8.830989E-6	0.002	4053	tags=100%, list=44%, signal=177%
+[TOP]	GO:0006520	cellular amino acid metabolic process	BIOLOGICAL_PROCESS	17	0.56351864	2.770422	0.0	1.3605244E-5	0.003	2968	tags=88%, list=32%, signal=129%
+[TOP]	GO:0007005	mitochondrion organization	BIOLOGICAL_PROCESS	19	0.5291397	2.7701268	0.0	1.3572927E-5	0.003	2914	tags=84%, list=31%, signal=122%
+[TOP]	GO:1902275	regulation of chromatin organization	BIOLOGICAL_PROCESS	16	0.5708639	2.7394779	0.0	1.822575E-5	0.004	2251	tags=81%, list=24%, signal=107%
+[TOP]	GO:0034976	response to endoplasmic reticulum stress	BIOLOGICAL_PROCESS	15	0.5806626	2.739344	0.0	1.8182664E-5	0.004	3900	tags=100%, list=42%, signal=172%
+[TOP]	GO:0034655	nucleobase-containing compound catabolic process	BIOLOGICAL_PROCESS	18	0.5287493	2.6708283	0.0	3.206275E-5	0.007	3867	tags=94%, list=42%, signal=162%
+[TOP]	GO:0050900	leukocyte migration	BIOLOGICAL_PROCESS	15	0.5733679	2.6706624	0.0	3.198731E-5	0.007	2730	tags=87%, list=29%, signal=123%
+[TOP]	GO:0051258	protein polymerization	BIOLOGICAL_PROCESS	15	0.56454086	2.670449	0.0	3.1912223E-5	0.007	2193	tags=80%, list=24%, signal=105%
+[TOP]	GO:0033500	carbohydrate homeostasis	BIOLOGICAL_PROCESS	15	0.5566203	2.6375093	0.0	3.1837488E-5	0.007	3504	tags=93%, list=38%, signal=150%
+[TOP]	GO:1901214	regulation of neuron death	BIOLOGICAL_PROCESS	16	0.5382042	2.6135695	0.0	3.608503E-5	0.008	4294	tags=100%, list=46%, signal=186%
+[TOP]	GO:0045637	regulation of myeloid cell differentiation	BIOLOGICAL_PROCESS	16	0.5393778	2.603915	0.0	4.080791E-5	0.009	3703	tags=94%, list=40%, signal=156%
+[TOP]	GO:0042593	glucose homeostasis	BIOLOGICAL_PROCESS	15	0.5566203	2.5338886	0.0	1.0831469E-4	0.023	3504	tags=93%, list=38%, signal=150%
+[TOP]	GO:0034660	ncRNA metabolic process	BIOLOGICAL_PROCESS	15	0.50447834	2.3391426	0.0	5.6586316E-4	0.119	4606	tags=100%, list=50%, signal=198%

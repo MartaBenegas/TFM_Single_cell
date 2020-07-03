@@ -1,0 +1,12 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0043434	response to peptide hormone	BIOLOGICAL_PROCESS	20	0.58388054	3.1149209	0.0	0.0	0.0	2739	tags=95%, list=37%, signal=150%
+[TOP, DETAILS]	GO:1901653	cellular response to peptide	BIOLOGICAL_PROCESS	17	0.58291864	2.988103	0.0	0.0	0.0	3117	tags=100%, list=42%, signal=172%
+[TOP, DETAILS]	GO:0071375	cellular response to peptide hormone stimulus	BIOLOGICAL_PROCESS	16	0.58284026	2.8398354	0.0	0.0	0.0	3117	tags=100%, list=42%, signal=172%
+[TOP, DETAILS]	GO:0061458	reproductive system development	BIOLOGICAL_PROCESS	15	0.49939495	2.3938563	0.0	0.001541774	0.003	1253	tags=67%, list=17%, signal=80%
+[TOP, DETAILS]	GO:0030900	forebrain development	BIOLOGICAL_PROCESS	15	0.5175743	2.3689754	0.0020533882	0.0012334193	0.003	3105	tags=93%, list=42%, signal=160%
+[TOP, DETAILS]	GO:0009896	positive regulation of catabolic process	BIOLOGICAL_PROCESS	20	0.43877828	2.3359013	0.0	0.0017932691	0.005	4190	tags=100%, list=56%, signal=228%
+[TOP, DETAILS]	GO:0120031	plasma membrane bounded cell projection assembly	BIOLOGICAL_PROCESS	17	0.46899801	2.3328106	0.0	0.0015370878	0.005	3964	tags=100%, list=53%, signal=213%
+[TOP, DETAILS]	GO:0048608	reproductive structure development	BIOLOGICAL_PROCESS	15	0.49939495	2.3228743	0.0	0.0013449518	0.005	1253	tags=67%, list=17%, signal=80%
+[TOP, DETAILS]	GO:0031331	positive regulation of cellular catabolic process	BIOLOGICAL_PROCESS	18	0.4386602	2.2445846	0.0	0.0015235496	0.007	4190	tags=100%, list=56%, signal=228%
+[TOP, DETAILS]	GO:0001667	ameboidal-type cell migration	BIOLOGICAL_PROCESS	15	0.4688719	2.218393	0.0019723866	0.0013711946	0.007	3964	tags=100%, list=53%, signal=213%
+[TOP, DETAILS]	GO:0071900	regulation of protein serine/threonine kinase activity	BIOLOGICAL_PROCESS	16	0.3868007	1.8993711	0.014522822	0.010310699	0.057	4109	tags=94%, list=55%, signal=209%

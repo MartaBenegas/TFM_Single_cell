@@ -1,0 +1,2 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0015711	organic anion transport	BIOLOGICAL_PROCESS	15	0.373837	1.750824	0.036121674	0.036121674	0.019	4146	tags=93%, list=56%, signal=212%

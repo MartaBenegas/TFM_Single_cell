@@ -1,0 +1,35 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[TOP, DETAILS]	GO:0050808	synapse organization	BIOLOGICAL_PROCESS	34	0.73655915	5.0838027	0.0	0.0	0.0	1944	tags=100%, list=27%, signal=136%
+[TOP, DETAILS]	GO:0007409	axonogenesis	BIOLOGICAL_PROCESS	23	0.7796284	4.508196	0.0	0.0	0.0	1623	tags=100%, list=22%, signal=128%
+[TOP, DETAILS]	GO:0034329	cell junction assembly	BIOLOGICAL_PROCESS	22	0.7795211	4.4710684	0.0	0.0	0.0	1623	tags=100%, list=22%, signal=128%
+[TOP, DETAILS]	GO:0061564	axon development	BIOLOGICAL_PROCESS	24	0.7379314	4.2493696	0.0	0.0	0.0	1623	tags=96%, list=22%, signal=123%
+[TOP, DETAILS]	GO:0050803	regulation of synapse structure or activity	BIOLOGICAL_PROCESS	15	0.8542555	4.039296	0.0	0.0	0.0	1074	tags=100%, list=15%, signal=117%
+[TOP, DETAILS]	GO:0034765	regulation of ion transmembrane transport	BIOLOGICAL_PROCESS	21	0.71391225	4.0241113	0.0	0.0	0.0	2099	tags=100%, list=29%, signal=140%
+[TOP, DETAILS]	GO:0007611	learning or memory	BIOLOGICAL_PROCESS	21	0.69588554	3.8908193	0.0	0.0	0.0	2230	tags=100%, list=31%, signal=144%
+[TOP, DETAILS]	GO:0042391	regulation of membrane potential	BIOLOGICAL_PROCESS	24	0.65193653	3.8577857	0.0	0.0	0.0	1944	tags=92%, list=27%, signal=125%
+[TOP, DETAILS]	GO:0010959	regulation of metal ion transport	BIOLOGICAL_PROCESS	18	0.73823935	3.804223	0.0	0.0	0.0	1920	tags=100%, list=26%, signal=135%
+[TOP, DETAILS]	GO:0050890	cognition	BIOLOGICAL_PROCESS	21	0.69588554	3.7896852	0.0	0.0	0.0	2230	tags=100%, list=31%, signal=144%
+[TOP, DETAILS]	GO:0098742	cell-cell adhesion via plasma-membrane adhesion molecules	BIOLOGICAL_PROCESS	15	0.7874513	3.7443528	0.0	0.0	0.0	1074	tags=93%, list=15%, signal=109%
+[TOP, DETAILS]	GO:0007416	synapse assembly	BIOLOGICAL_PROCESS	15	0.7874513	3.724708	0.0	0.0	0.0	1074	tags=93%, list=15%, signal=109%
+[TOP, DETAILS]	GO:0031346	positive regulation of cell projection organization	BIOLOGICAL_PROCESS	21	0.6647795	3.7153594	0.0	0.0	0.0	2109	tags=95%, list=29%, signal=134%
+[TOP, DETAILS]	GO:0045666	positive regulation of neuron differentiation	BIOLOGICAL_PROCESS	21	0.6647795	3.620657	0.0	0.0	0.0	2109	tags=95%, list=29%, signal=134%
+[TOP, DETAILS]	GO:0016311	dephosphorylation	BIOLOGICAL_PROCESS	18	0.70467675	3.5877008	0.0	0.0	0.0	2164	tags=100%, list=30%, signal=142%
+[TOP, DETAILS]	GO:0048638	regulation of developmental growth	BIOLOGICAL_PROCESS	16	0.7409241	3.5876746	0.0	0.0	0.0	1899	tags=100%, list=26%, signal=135%
+[TOP, DETAILS]	GO:1904062	regulation of cation transmembrane transport	BIOLOGICAL_PROCESS	15	0.7380724	3.5237906	0.0	0.0	0.0	1919	tags=100%, list=26%, signal=135%
+[TOP, DETAILS]	GO:0010976	positive regulation of neuron projection development	BIOLOGICAL_PROCESS	19	0.6628147	3.4743834	0.0	0.0	0.0	2469	tags=100%, list=34%, signal=151%
+[TOP, DETAILS]	GO:0070838	divalent metal ion transport	BIOLOGICAL_PROCESS	17	0.67587596	3.4092236	0.0	0.0	0.0	1944	tags=94%, list=27%, signal=128%
+[TOP, DETAILS]	GO:0043087	regulation of GTPase activity	BIOLOGICAL_PROCESS	21	0.619218	3.365711	0.0	0.0	0.0	1746	tags=86%, list=24%, signal=112%
+[TOP, DETAILS]	GO:0032970	regulation of actin filament-based process	BIOLOGICAL_PROCESS	17	0.67275316	3.3475752	0.0	0.0	0.0	1538	tags=88%, list=21%, signal=112%
+[TOP, DETAILS]	GO:0043270	positive regulation of ion transport	BIOLOGICAL_PROCESS	16	0.67539877	3.2858875	0.0	0.0	0.0	1920	tags=94%, list=26%, signal=127%
+[TOP, DETAILS]	GO:0016049	cell growth	BIOLOGICAL_PROCESS	15	0.6939365	3.2473183	0.0	0.0	0.0	2240	tags=100%, list=31%, signal=144%
+[TOP, DETAILS]	GO:0006816	calcium ion transport	BIOLOGICAL_PROCESS	16	0.67209846	3.1785448	0.0	0.0	0.0	1944	tags=94%, list=27%, signal=128%
+[TOP, DETAILS]	GO:0009101	glycoprotein biosynthetic process	BIOLOGICAL_PROCESS	16	0.66144115	3.1736207	0.0	0.0	0.0	2477	tags=100%, list=34%, signal=151%
+[TOP, DETAILS]	GO:0009314	response to radiation	BIOLOGICAL_PROCESS	17	0.6476413	3.1513128	0.0	0.0	0.0	2578	tags=100%, list=35%, signal=154%
+[TOP, DETAILS]	GO:0009100	glycoprotein metabolic process	BIOLOGICAL_PROCESS	18	0.60593	3.129226	0.0	0.0	0.0	2477	tags=94%, list=34%, signal=143%
+[TOP, DETAILS]	GO:0043547	positive regulation of GTPase activity	BIOLOGICAL_PROCESS	18	0.6104998	3.0986502	0.0	0.0	0.0	1634	tags=83%, list=22%, signal=107%
+[TOP, DETAILS]	GO:0019932	second-messenger-mediated signaling	BIOLOGICAL_PROCESS	16	0.6327695	3.072599	0.0	0.0	0.0	2230	tags=94%, list=31%, signal=135%
+[TOP, DETAILS]	GO:0032956	regulation of actin cytoskeleton organization	BIOLOGICAL_PROCESS	15	0.65889364	3.0337493	0.0	0.0	0.0	2009	tags=93%, list=28%, signal=129%
+[TOP, DETAILS]	GO:0007626	locomotory behavior	BIOLOGICAL_PROCESS	16	0.6194307	3.0301695	0.0	0.0	0.0	1416	tags=81%, list=19%, signal=101%
+[TOP, DETAILS]	GO:0006914	autophagy	BIOLOGICAL_PROCESS	16	0.5999725	2.8980422	0.0	0.0	0.0	2924	tags=100%, list=40%, signal=167%
+[TOP, DETAILS]	GO:0061919	process utilizing autophagic mechanism	BIOLOGICAL_PROCESS	16	0.5999725	2.8681488	0.0	0.0	0.0	2924	tags=100%, list=40%, signal=167%
+[TOP, DETAILS]	GO:0010038	response to metal ion	BIOLOGICAL_PROCESS	17	0.54109395	2.6604562	0.0	0.0	0.0	2924	tags=94%, list=40%, signal=157%

@@ -1,0 +1,2 @@
+Tags	GO ID	GO Name	GO Category	Size	ES	NES	Nominal p-val	FDR q-val	FWER p-val	Rank at Max	Leading Edge
+[BOTTOM, DETAILS]	GO:0002181	cytoplasmic translation	BIOLOGICAL_PROCESS	114	-0.18585755	-2.2401972	0.008298756	0.23978928	0.423	941	tags=70%, list=53%, signal=139%
